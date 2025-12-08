@@ -14,7 +14,7 @@ export const HERO_DATA = {
   ],
   tagline: "Turning raw data into actionable business insights through predictive modeling, deep learning, and intuitive visualization.",
   // NOTE: Place your 'resume.pdf' file in the 'public' folder of your project root.
-  resumeLink: "/resume.pdf"
+  resumeLink: "Public/resume.pdf"
 };
 
 export const ABOUT_DATA = {
