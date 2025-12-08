@@ -4,7 +4,7 @@ export interface Project {
   title: string;
   description: string;
   tags: string[];
-  category: 'ML' | 'Visualization' | 'Data Engineering' | 'Analysis' | 'Software Development';
+  category: 'ML' | 'Visualization' | 'Data Engineering' | 'Analysis' | 'Software Development' | 'Generative AI' | 'Deep Learning';
   imageUrl: string;
   repoUrl?: string;
   demoUrl?: string;

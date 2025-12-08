@@ -28,24 +28,57 @@ export const ABOUT_DATA = {
 export const PROJECTS: Project[] = [
   {
     id: 1,
-    title: "Stock Price Prediction Using LSTM",
-    description: "Built and trained an LSTM-based deep learning model in Python to predict stock prices using historical closing data, demonstrating strong understanding of time series forecasting.",
-    impact: "Evaluated and visualized model accuracy, optimizing performance through normalization and time-step sequencing.",
-    tags: ["Python", "LSTM", "Time Series", "Deep Learning"],
-    category: "ML",
-    imageUrl: "https://picsum.photos/600/400?random=1",
-    repoUrl: "https://github.com/name/repo",
+    title: "Generative AI for Content Creation",
+    description: "Developed an automated content creation pipeline using fine-tuned GPT models and StyleGAN. The system generates high-quality marketing copy and accompanying visual assets tailored to specific brand voices.",
+    impact: "Reduced content production time by 60% and enhanced creative output consistency across marketing channels.",
+    tags: ["GPT-3", "StyleGAN", "PyTorch", "FastAPI"],
+    category: "Generative AI",
+    imageUrl: "https://picsum.photos/600/400?random=10",
+    repoUrl: "https://github.com/haricharanbytes/gen-ai-content",
     demoUrl: "#"
   },
   {
     id: 2,
-    title: "Synchronized Desktop Calendar",
-    description: "Developed a desktop calendar with globally shared and synchronized calendars, allowing users to schedule meetings with other users.",
-    impact: "Enabled seamless scheduling and synchronization across multiple users.",
-    tags: ["C#", ".NET", "SQL", "XML"],
-    category: "Software Development",
-    imageUrl: "https://picsum.photos/600/400?random=2",
-    repoUrl: "https://github.com/name/repo",
+    title: "Deep Learning Medical Image Recognition",
+    description: "Designed a Convolutional Neural Network (CNN) system to assist in medical diagnostics by classifying X-ray imagery. Utilized OpenCV for preprocessing and transfer learning for high accuracy.",
+    impact: "Achieved 95% accuracy in identifying anomalies, potentially reducing manual diagnostic screening time by 40%.",
+    tags: ["TensorFlow", "CNN", "OpenCV", "Medical Imaging"],
+    category: "Deep Learning",
+    imageUrl: "https://picsum.photos/600/400?random=11",
+    repoUrl: "https://github.com/haricharanbytes/medical-image-recognition",
+    demoUrl: "#"
+  },
+  {
+    id: 3,
+    title: "Predictive Analytics for Business Insights",
+    description: "Built an end-to-end predictive analytics suite using LSTM and RNN architectures to forecast product demand and analyze customer churn patterns based on historical time-series data.",
+    impact: "Increased sales forecast accuracy by 18% and optimized inventory allocation resources.",
+    tags: ["LSTM", "RNN", "Keras", "Scikit-Learn"],
+    category: "ML",
+    imageUrl: "https://picsum.photos/600/400?random=12",
+    repoUrl: "https://github.com/haricharanbytes/predictive-analytics",
+    demoUrl: "#"
+  },
+  {
+    id: 4,
+    title: "NLP Chatbot & Sentiment Analysis",
+    description: "Engineered an intelligent customer support chatbot capable of context-aware responses and real-time sentiment analysis to prioritize critical user feedback using BERT and SpaCy.",
+    impact: "Reduced customer support response times by 30% and improved customer satisfaction ratings significantly.",
+    tags: ["BERT", "SpaCy", "NLTK", "Hugging Face"],
+    category: "Generative AI",
+    imageUrl: "https://picsum.photos/600/400?random=13",
+    repoUrl: "https://github.com/haricharanbytes/nlp-chatbot",
+    demoUrl: "#"
+  },
+  {
+    id: 5,
+    title: "Synthetic Data Augmentation with GANs",
+    description: "Implemented Generative Adversarial Networks (GANs) to generate high-fidelity synthetic data for training models in domains with scarce labeled datasets, ensuring robust model performance.",
+    impact: "Achieved 12% improvement in downstream model classification accuracy by augmenting underrepresented classes.",
+    tags: ["GANs", "PyTorch", "Data Augmentation", "Python"],
+    category: "Deep Learning",
+    imageUrl: "https://picsum.photos/600/400?random=14",
+    repoUrl: "https://github.com/haricharanbytes/gan-augmentation",
     demoUrl: "#"
   }
 ];
@@ -86,6 +119,8 @@ export const SKILLS: Skill[] = [
   { name: "Matplotlib", category: "Data Analysis & Visualization" },
   { name: "Seaborn", category: "Data Analysis & Visualization" },
 
+  { name: "Scikit-Learn", category: "Machine Learning" },
+  { name: "XGBoost", category: "Machine Learning" },
   
   { name: "LLMs (GPT, Llama)", category: "Generative AI & NLP" },
   { name: "Hugging Face", category: "Generative AI & NLP" },
@@ -122,7 +157,7 @@ export const TESTIMONIALS: Testimonial[] = [];
 export const ARTICLES: Article[] = [];
 
 export const SOCIAL_LINKS = [
-  { platform: "GitHub", url: "https://github.com/haricharanbytes", icon: <Github size={20} /> },
-  { platform: "LinkedIn", url: "https://linkedin.com", icon: <Linkedin size={20} /> },
+  { platform: "GitHub", url: "https://github.com/haricharnbytes", icon: <Github size={20} /> },
+  { platform: "LinkedIn", url: "https://www.linkedin.com/in/hari-charan-katta-70b535232/", icon: <Linkedin size={20} /> },
   { platform: "Email", url: `mailto:${ABOUT_DATA.email}`, icon: <Mail size={20} /> },
 ];
