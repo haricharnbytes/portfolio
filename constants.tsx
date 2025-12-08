@@ -9,8 +9,7 @@ export const HERO_DATA = {
   roles: [
     "Data Scientist",
     "Machine Learning Engineer",
-    "Deep Learning Engineer",
-    "Data Analyst"
+    "AI Engineer",
   ],
   tagline: "Turning raw data into actionable business insights through predictive modeling, deep learning, and intuitive visualization.",
   // NOTE: Place your 'resume.pdf' file in the 'public' folder of your project root.
