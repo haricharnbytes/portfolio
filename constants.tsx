@@ -1,19 +1,22 @@
 
+
 import React from 'react';
 import { Project, Job, Skill, EducationItem, Testimonial, Article } from './types';
 import { Github, Linkedin, Mail, Twitter, BookOpen } from 'lucide-react';
 
 export const HERO_DATA = {
   name: "Katta Hari Charan",
-  title: "Data Scientist & ML Engineer", // Fallback
+  title: "Data Scientist & ML Engineer",
   roles: [
     "Data Scientist",
     "Machine Learning Engineer",
     "AI Engineer",
   ],
-  tagline: "Turning raw data into actionable business insights through predictive modeling, deep learning, and intuitive visualization.",
-  // NOTE: Place your 'resume.pdf' file in the 'public' folder of your project root.
-  resumeLink: "Public/resume.pdf"
+  tagline:
+    "Turning raw data into actionable business insights through predictive modeling, deep learning, and intuitive visualization.",
+
+  // Resume file stored in /public/Charan_s_Resume.pdf
+  resumeLink: "/Charan_s_Resume.pdf",
 };
 
 export const ABOUT_DATA = {
