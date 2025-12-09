@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import { Project, Job, Skill, EducationItem, Testimonial, Article } from './types';
 import { Github, Linkedin, Mail, Twitter, BookOpen } from 'lucide-react';
@@ -7,18 +5,12 @@ import { Github, Linkedin, Mail, Twitter, BookOpen } from 'lucide-react';
 export const HERO_DATA = {
   name: "Katta Hari Charan",
   title: "Data Scientist & ML Engineer",
-  roles: [
-    "Data Scientist",
-    "Machine Learning Engineer",
-    "AI Engineer",
-  ],
+  roles: ["Data Scientist", "Machine Learning Engineer", "AI Engineer"],
   tagline:
     "Turning raw data into actionable business insights through predictive modeling, deep learning, and intuitive visualization.",
-
-  // Resume file stored in /public/Charan_s_Resume.pdf
-  resumeLink: "public/Charan_s_Resume.pdf",
+  
+  resumeLink: "/Charan_s_Resume.pdf",
 };
-
 export const ABOUT_DATA = {
   bio: "Machine Learning & Deep Learning Engineer with 2 years’ experience designing predictive models for agriculture and real estate. Delivered 85% accuracy in regression tasks by integrating UAV, Sentinel, and ground data using advanced algorithms. Expert in feature engineering, model optimization, and data visualization to drive actionable, data-driven insights.",
   goals: "I am currently looking for opportunities to leverage my skills in Deep Learning and Generative AI to drive innovation in industry sectors. My goal is to build AI systems that are not only accurate but also ethical and explainable.",
