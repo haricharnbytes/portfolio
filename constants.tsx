@@ -16,7 +16,7 @@ export const HERO_DATA = {
     "Turning raw data into actionable business insights through predictive modeling, deep learning, and intuitive visualization.",
 
   // Resume file stored in /public/Charan_s_Resume.pdf
-  resumeLink: "/Charan_s_Resume.pdf",
+  resumeLink: "public/Charan_s_Resume.pdf",
 };
 
 export const ABOUT_DATA = {
