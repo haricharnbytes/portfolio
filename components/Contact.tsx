@@ -61,7 +61,7 @@ export const Contact: React.FC = () => {
                 </div>
                 <div className="flex flex-col min-w-0">
                   <span className="text-[10px] font-black uppercase opacity-60 tracking-widest">Email_Address</span>
-                  <span className="text-sm md:text-xl font-black uppercase tracking-tighter truncate">{ABOUT_DATA.email}</span>
+                  <span className="text-xs md:text-lg font-black uppercase tracking-tighter truncate">{ABOUT_DATA.email}</span>
                 </div>
               </a>
 
