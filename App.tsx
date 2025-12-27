@@ -11,15 +11,17 @@ import { Footer } from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-900 font-sans text-slate-800 dark:text-slate-100 overflow-x-hidden transition-colors duration-300">
+    <div className="min-h-screen bg-white dark:bg-zinc-950 font-sans text-zinc-900 dark:text-zinc-100 overflow-x-hidden transition-colors duration-300">
       <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Experience />
-      <Education />
-      <Contact />
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Experience />
+        <Education />
+        <Contact />
+      </main>
       <Footer />
     </div>
   );

@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowDown, Download } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
 import { HERO_DATA } from '../constants';
 
 const TypingEffect = ({ words }: { words: string[] }) => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
-  const [typingSpeed, setTypingSpeed] = useState(120);
+  const [typingSpeed, setTypingSpeed] = useState(100);
 
   useEffect(() => {
     const handleTyping = () => {
@@ -14,14 +14,14 @@ const TypingEffect = ({ words }: { words: string[] }) => {
       
       if (isDeleting) {
         setCurrentText(fullText.substring(0, currentText.length - 1));
-        setTypingSpeed(40); // Faster when deleting (updated speed)
+        setTypingSpeed(30);
       } else {
         setCurrentText(fullText.substring(0, currentText.length + 1));
-        setTypingSpeed(120); // Normal typing speed (updated speed)
+        setTypingSpeed(100);
       }
 
       if (!isDeleting && currentText === fullText) {
-        setTimeout(() => setIsDeleting(true), 1600); // Wait before deleting (updated duration)
+        setTimeout(() => setIsDeleting(true), 2000);
       } else if (isDeleting && currentText === '') {
         setIsDeleting(false);
         setCurrentWordIndex((prev) => (prev + 1) % words.length);
@@ -33,57 +33,92 @@ const TypingEffect = ({ words }: { words: string[] }) => {
   }, [currentText, isDeleting, words, currentWordIndex, typingSpeed]);
 
   return (
-    <span className="inline-block min-h-[1.5em]">
+    <span className="inline-block min-h-[1.2em] text-white dark:text-zinc-900">
       {currentText}
-      <span className="animate-pulse ml-1 text-accent">|</span>
+      <span className="animate-[pulse_0.8s_infinite] ml-1.5 bg-white/60 dark:bg-zinc-900/40 inline-block w-4 h-[0.85em] translate-y-1.5 border border-white/20 dark:border-zinc-900/10"></span>
     </span>
   );
 };
 
 export const Hero: React.FC = () => {
   return (
-    <div className="relative min-h-screen flex items-center justify-center bg-slate-50 dark:bg-slate-900 pt-20 overflow-hidden transition-colors duration-300">
-      {/* Background Decorative Elements */}
-      <div className="absolute top-20 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl opacity-60 -z-10 transform translate-x-1/2"></div>
-      <div className="absolute bottom-20 left-0 w-96 h-96 bg-primary/20 dark:bg-slate-700/30 rounded-full blur-3xl opacity-60 -z-10 transform -translate-x-1/3"></div>
+    <div className="relative min-h-[85vh] flex items-center justify-center pt-24 pb-12 overflow-hidden transition-colors duration-500">
+      {/* Brutalist Background Elements */}
+      <div className="absolute inset-0 opacity-10 dark:opacity-20 pointer-events-none select-none overflow-hidden">
+         <div className="absolute top-[10%] left-[5%] text-[15vw] font-black text-zinc-900 dark:text-white leading-none border-b-[10px] border-zinc-900 dark:border-white select-none whitespace-nowrap">
+           DATA_SC
+         </div>
+         <div className="absolute bottom-[10%] right-[5%] text-[15vw] font-black text-zinc-900 dark:text-white leading-none outline-text-subtle opacity-30 select-none whitespace-nowrap">
+           GEN_AI
+         </div>
+      </div>
 
-      <div className="max-w-4xl px-6 text-center">
-        <span className="inline-block py-1 px-3 rounded-full bg-accent/10 text-accent text-xs font-semibold tracking-wider mb-6">
-          AVAILABLE FOR HIRE
-        </span>
-        <h1 className="text-5xl md:text-7xl font-bold text-primary dark:text-white mb-6 tracking-tight group cursor-default">
-          <span className="group-hover:text-accent transition-colors duration-300">{HERO_DATA.name}</span>
-        </h1>
-        <h2 className="text-2xl md:text-3xl text-slate-500 dark:text-slate-400 font-light mb-8 h-12">
-           <TypingEffect words={HERO_DATA.roles} />
-        </h2>
-        <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
-          {HERO_DATA.tagline}
-        </p>
-        
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
-            href="#projects"
-            className="px-8 py-3 bg-accent text-white rounded-lg font-medium hover:bg-opacity-90 transition-colors shadow-lg shadow-accent/20 w-full sm:w-auto"
-          >
-            View Work
-          </a>
-          <a
-            href={HERO_DATA.resumeLink}
-            download="Katta_Hari_Charan_Resume.pdf"
-            className="px-8 py-3 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 rounded-lg font-medium hover:bg-slate-50 dark:hover:bg-slate-700 hover:border-slate-300 dark:hover:border-slate-600 transition-colors flex items-center justify-center gap-2 w-full sm:w-auto"
-          >
-            <Download size={18} className="text-accent" />
-            Download CV
-          </a>
+      <div className="max-w-7xl px-6 relative z-10 w-full">
+        <div className="flex flex-col items-start text-left">
+          <div className="inline-block px-4 py-1.5 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 font-black uppercase text-[10px] tracking-[0.2em] mb-8 brutal-border shadow-brutal-sm dark:shadow-brutal-white animate-fade-in">
+            Active Research & Deployment
+          </div>
+          
+          <div className="relative group cursor-default mb-6">
+            {/* Background layered text for hover depth effect */}
+            <span 
+              className="absolute inset-0 text-4xl sm:text-6xl md:text-8xl lg:text-[9.5rem] font-black text-transparent uppercase tracking-tighter leading-[0.85] select-none transition-all duration-500 group-hover:translate-x-2 group-hover:translate-y-2 group-hover:text-teal-600/10 dark:group-hover:text-teal-400/10"
+              aria-hidden="true"
+            >
+              {HERO_DATA.name}
+            </span>
+            
+            <h1 className="relative text-4xl sm:text-6xl md:text-8xl lg:text-[9.5rem] font-black text-zinc-900 dark:text-white uppercase tracking-tighter leading-[0.85] transition-all duration-300 whitespace-nowrap group-hover:text-teal-600 dark:group-hover:text-teal-400">
+              {HERO_DATA.name}
+            </h1>
+          </div>
+          
+          <div className="text-xl md:text-4xl font-black uppercase tracking-tighter mb-12 h-14 md:h-16 flex items-center bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 px-6 brutal-border shadow-brutal dark:shadow-brutal-white transition-all transform hover:scale-[1.02]">
+             <TypingEffect words={HERO_DATA.roles} />
+          </div>
+          
+          <div className="flex flex-col lg:flex-row items-start lg:items-center gap-12 w-full max-w-6xl">
+            <p className="text-lg md:text-2xl text-zinc-600 dark:text-zinc-400 max-w-2xl font-bold leading-tight border-l-8 border-zinc-900 dark:border-white pl-8 py-2">
+              {HERO_DATA.tagline}
+            </p>
+            
+            <div className="flex flex-col sm:flex-row items-center gap-6 w-full lg:w-auto mt-6 lg:mt-0">
+              <a
+                href="#projects"
+                className="px-10 py-5 bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 text-base font-black uppercase tracking-widest brutal-border shadow-brutal dark:shadow-brutal-white transition-all brutal-btn w-full sm:w-auto text-center hover:translate-x-1 hover:-translate-y-1"
+              >
+                Explore Work
+              </a>
+              <a
+                href="#contact"
+                className="px-10 py-5 bg-white dark:bg-zinc-800 text-zinc-900 dark:text-white text-base font-black uppercase tracking-widest brutal-border shadow-brutal dark:shadow-brutal-white transition-all brutal-btn w-full sm:w-auto text-center hover:translate-x-1 hover:-translate-y-1"
+              >
+                Contact
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-slate-400">
-        <a href="#about" aria-label="Scroll down">
-          <ArrowDown size={24} />
-        </a>
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 md:left-12 md:translate-x-0 group cursor-pointer" onClick={() => document.getElementById('about')?.scrollIntoView({behavior: 'smooth'})}>
+        <div className="p-4 brutal-border bg-white dark:bg-zinc-800 shadow-brutal group-hover:bg-zinc-900 group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-zinc-900 transition-all">
+          <ArrowDown size={24} className="animate-bounce" />
+        </div>
       </div>
+
+      <style>{`
+        .outline-text-subtle {
+          -webkit-text-stroke: 1px currentColor;
+          color: transparent;
+        }
+        @keyframes fade-in {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+          animation: fade-in 0.6s ease-out forwards;
+        }
+      `}</style>
     </div>
   );
 };

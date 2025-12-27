@@ -1,3 +1,4 @@
+import React from 'react';
 
 export interface Project {
   id: number;
@@ -21,6 +22,7 @@ export interface Job {
 
 export interface Skill {
   name: string;
+  icon: string; // Slug for Simple Icons or URL
   category: 'Languages' | 'Data Analysis & Visualization' | 'Machine Learning' | 'Generative AI & NLP' | 'Deep Learning Frameworks' | 'Development & Collaboration Tools';
 }
 

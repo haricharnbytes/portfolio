@@ -8,16 +8,19 @@ interface SectionProps {
 }
 
 export const Section: React.FC<SectionProps> = ({ id, title, className = "", children }) => {
-  // Add scroll-mt-28 to account for sticky header height when scrolling
   return (
-    <section id={id} className={`py-20 md:py-28 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto scroll-mt-28 ${className}`}>
+    <section id={id} className={`py-16 md:py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto scroll-mt-20 ${className}`}>
       {title && (
-        <h2 className="text-3xl md:text-4xl font-bold text-primary dark:text-white mb-12 relative inline-block">
-          {title}
-          <span className="absolute -bottom-3 left-0 w-1/3 h-1.5 bg-accent rounded-full"></span>
-        </h2>
+        <div className="mb-12">
+          <h2 className="text-4xl md:text-6xl font-black text-zinc-900 dark:text-white uppercase tracking-tighter brutal-border bg-white dark:bg-zinc-900 px-6 py-3 shadow-brutal dark:shadow-brutal-white inline-block">
+            {title}
+          </h2>
+          <div className="h-1.5 w-16 bg-zinc-900 dark:bg-white mt-3"></div>
+        </div>
       )}
-      {children}
+      <div className="relative">
+        {children}
+      </div>
     </section>
   );
 };

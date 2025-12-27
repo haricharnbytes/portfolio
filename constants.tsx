@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Project, Job, Skill, EducationItem, Testimonial, Article } from './types';
 import { Github, Linkedin, Mail, Twitter, BookOpen } from 'lucide-react';
@@ -5,12 +6,15 @@ import { Github, Linkedin, Mail, Twitter, BookOpen } from 'lucide-react';
 export const HERO_DATA = {
   name: "Katta Hari Charan",
   title: "Data Scientist & ML Engineer",
-  roles: ["Data Scientist", "Machine Learning Engineer", "AI Engineer"],
-  tagline:
-    "Turning raw data into actionable business insights through predictive modeling, deep learning, and intuitive visualization.",
-  
-  resumeLink: "/Charan_s_Resume.pdf",
+  roles: [
+    "Data Scientist",
+    "Machine Learning Engineer",
+    "AI Engineer",
+  ],
+  tagline: "Turning raw data into actionable business insights through predictive modeling, deep learning, and intuitive visualization.",
+  resumeLink: "/resume.pdf"
 };
+
 export const ABOUT_DATA = {
   bio: "Machine Learning & Deep Learning Engineer with 2 years’ experience designing predictive models for agriculture and real estate. Delivered 85% accuracy in regression tasks by integrating UAV, Sentinel, and ground data using advanced algorithms. Expert in feature engineering, model optimization, and data visualization to drive actionable, data-driven insights.",
   goals: "I am currently looking for opportunities to leverage my skills in Deep Learning and Generative AI to drive innovation in industry sectors. My goal is to build AI systems that are not only accurate but also ethical and explainable.",
@@ -24,55 +28,33 @@ export const PROJECTS: Project[] = [
     id: 1,
     title: "Generative AI for Content Creation",
     description: "Developed an automated content creation pipeline using fine-tuned GPT models and StyleGAN. The system generates high-quality marketing copy and accompanying visual assets tailored to specific brand voices.",
-    impact: "Reduced content production time by 60% and enhanced creative output consistency across marketing channels.",
-    tags: ["GPT-3", "StyleGAN", "PyTorch", "FastAPI"],
+    impact: "Reduced content production time by 60% and enhanced creative output consistency.",
+    tags: ["OpenAI", "PyTorch", "FastAPI", "Stable Diffusion"],
     category: "Generative AI",
     imageUrl: "https://picsum.photos/600/400?random=10",
-    repoUrl: "https://github.com/haricharanbytes/gen-ai-content",
+    repoUrl: "https://github.com/haricharnbytes",
     demoUrl: "#"
   },
   {
     id: 2,
-    title: "Deep Learning Medical Image Recognition",
-    description: "Designed a Convolutional Neural Network (CNN) system to assist in medical diagnostics by classifying X-ray imagery. Utilized OpenCV for preprocessing and transfer learning for high accuracy.",
-    impact: "Achieved 95% accuracy in identifying anomalies, potentially reducing manual diagnostic screening time by 40%.",
-    tags: ["TensorFlow", "CNN", "OpenCV", "Medical Imaging"],
+    title: "Medical Image Diagnostic Pipeline",
+    description: "Designed a CNN-based system to assist in diagnostics by classifying medical imagery. Utilized transfer learning and OpenCV for preprocessing pipelines.",
+    impact: "Achieved 95% classification accuracy, streamlining diagnostic screening processes.",
+    tags: ["TensorFlow", "Keras", "OpenCV", "CNN"],
     category: "Deep Learning",
     imageUrl: "https://picsum.photos/600/400?random=11",
-    repoUrl: "https://github.com/haricharanbytes/medical-image-recognition",
+    repoUrl: "https://github.com/haricharnbytes",
     demoUrl: "#"
   },
   {
     id: 3,
-    title: "Predictive Analytics for Business Insights",
-    description: "Built an end-to-end predictive analytics suite using LSTM and RNN architectures to forecast product demand and analyze customer churn patterns based on historical time-series data.",
-    impact: "Increased sales forecast accuracy by 18% and optimized inventory allocation resources.",
-    tags: ["LSTM", "RNN", "Keras", "Scikit-Learn"],
+    title: "Predictive Real Estate Analytics",
+    description: "Built demand forecasting and pricing models using historical time-series data and gradient boosting techniques.",
+    impact: "Increased sales forecast accuracy by 18% for regional stakeholders.",
+    tags: ["Scikit-Learn", "XGBoost", "Pandas", "Matplotlib"],
     category: "ML",
     imageUrl: "https://picsum.photos/600/400?random=12",
-    repoUrl: "https://github.com/haricharanbytes/predictive-analytics",
-    demoUrl: "#"
-  },
-  {
-    id: 4,
-    title: "NLP Chatbot & Sentiment Analysis",
-    description: "Engineered an intelligent customer support chatbot capable of context-aware responses and real-time sentiment analysis to prioritize critical user feedback using BERT and SpaCy.",
-    impact: "Reduced customer support response times by 30% and improved customer satisfaction ratings significantly.",
-    tags: ["BERT", "SpaCy", "NLTK", "Hugging Face"],
-    category: "Generative AI",
-    imageUrl: "https://picsum.photos/600/400?random=13",
-    repoUrl: "https://github.com/haricharanbytes/nlp-chatbot",
-    demoUrl: "#"
-  },
-  {
-    id: 5,
-    title: "Synthetic Data Augmentation with GANs",
-    description: "Implemented Generative Adversarial Networks (GANs) to generate high-fidelity synthetic data for training models in domains with scarce labeled datasets, ensuring robust model performance.",
-    impact: "Achieved 12% improvement in downstream model classification accuracy by augmenting underrepresented classes.",
-    tags: ["GANs", "PyTorch", "Data Augmentation", "Python"],
-    category: "Deep Learning",
-    imageUrl: "https://picsum.photos/600/400?random=14",
-    repoUrl: "https://github.com/haricharanbytes/gan-augmentation",
+    repoUrl: "https://github.com/haricharnbytes",
     demoUrl: "#"
   }
 ];
@@ -84,10 +66,9 @@ export const JOBS: Job[] = [
     company: "CSIR - Fourth Paradigm Institute",
     period: "Dec 2023 - Present",
     description: [
-      "Developed and optimised machine learning and deep learning models for chlorophyll estimation, achieving up to 80% prediction accuracy.",
-      "Performed in-depth Exploratory Data Analysis (EDA) on multispectral UAV imagery and in-situ chlorophyll measurements, uncovering key patterns, trends, and correlations to support accurate predictive modeling.",
-      "Integrated UAV multispectral data with ground-based measurements to derive vegetation indices for precision agriculture applications.",
-      "Producing data visualisations and writing research documentation to present actionable insights for crop health monitoring."
+      "Developed and optimized deep learning models for chlorophyll estimation with 80% accuracy.",
+      "Conducted extensive EDA on multispectral UAV imagery and in-situ data to drive predictive performance.",
+      "Integrated multi-source sensor data for precision agriculture health monitoring applications."
     ]
   },
   {
@@ -96,58 +77,51 @@ export const JOBS: Job[] = [
     company: "Aditi Software",
     period: "Oct 2023 - Dec 2023",
     description: [
-      "Performed data preprocessing and exploratory data analysis (EDA) on the California housing dataset to identify key factors influencing property values.",
-      "Built and evaluated multiple regression models, achieving a 92% R² score on test data.",
-      "Engineered features such as median income, housing age, and ocean proximity to optimize model accuracy and improve prediction reliability."
+      "Built regression models for housing value prediction achieving a 92% R² score.",
+      "Engineered complex features from geographical and socioeconomic datasets to optimize model bias."
     ]
-  },
-
+  }
 ];
 
 export const SKILLS: Skill[] = [
-  { name: "Python", category: "Languages" },
-  { name: "SQL", category: "Languages" },
+  { name: "Python", icon: "python", category: "Languages" },
+  { name: "SQL", icon: "postgresql", category: "Languages" },
   
-  { name: "Pandas", category: "Data Analysis & Visualization" },
-  { name: "NumPy", category: "Data Analysis & Visualization" },
-  { name: "Matplotlib", category: "Data Analysis & Visualization" },
-  { name: "Seaborn", category: "Data Analysis & Visualization" },
+  { name: "Pandas", icon: "pandas", category: "Data Analysis & Visualization" },
+  { name: "NumPy", icon: "numpy", category: "Data Analysis & Visualization" },
+  { name: "Matplotlib", icon: "matplotlib", category: "Data Analysis & Visualization" },
+  { name: "Plotly", icon: "plotly", category: "Data Analysis & Visualization" },
 
-  { name: "Scikit-Learn", category: "Machine Learning" },
-  { name: "XGBoost", category: "Machine Learning" },
+  { name: "Scikit-Learn", icon: "scikitlearn", category: "Machine Learning" },
+  { name: "XGBoost", icon: "xgboost", category: "Machine Learning" },
   
-  { name: "LLMs (GPT, Llama)", category: "Generative AI & NLP" },
-  { name: "Hugging Face", category: "Generative AI & NLP" },
-  { name: "LangChain", category: "Generative AI & NLP" },
-  { name: "RAG", category: "Generative AI & NLP" },
-  { name: "BERT & GPT", category: "Generative AI & NLP" },
-  { name: "NLTK", category: "Generative AI & NLP" },
-  { name: "Spacy", category: "Generative AI & NLP" },
-  { name: "GANs & VAEs", category: "Generative AI & NLP" },
+  { name: "OpenAI", icon: "openai", category: "Generative AI & NLP" },
+  { name: "Hugging Face", icon: "huggingface", category: "Generative AI & NLP" },
+  { name: "LangChain", icon: "python", category: "Generative AI & NLP" },
+  { name: "Transformers", icon: "huggingface", category: "Generative AI & NLP" },
   
-  { name: "Keras", category: "Deep Learning Frameworks" },
-  { name: "TensorFlow", category: "Deep Learning Frameworks" },
-  { name: "PyTorch", category: "Deep Learning Frameworks" },
+  { name: "Keras", icon: "keras", category: "Deep Learning Frameworks" },
+  { name: "TensorFlow", icon: "tensorflow", category: "Deep Learning Frameworks" },
+  { name: "PyTorch", icon: "pytorch", category: "Deep Learning Frameworks" },
   
-  { name: "Jupyter Notebook", category: "Development & Collaboration Tools" },
-  { name: "Git", category: "Development & Collaboration Tools" },
-  { name: "GitHub", category: "Development & Collaboration Tools" },
-  { name: "Visual Studio Code", category: "Development & Collaboration Tools" },
-  { name: "Google Colab", category: "Development & Collaboration Tools" },
+  { name: "Jupyter", icon: "jupyter", category: "Development & Collaboration Tools" },
+  { name: "Git", icon: "git", category: "Development & Collaboration Tools" },
+  { name: "GitHub", icon: "github", category: "Development & Collaboration Tools" },
+  { name: "VS Code", icon: "visualstudiocode", category: "Development & Collaboration Tools" },
+  { name: "Google Colab", icon: "googlecolab", category: "Development & Collaboration Tools" },
 ];
 
 export const EDUCATION: EducationItem[] = [
-   {
+  {
     id: 1,
     degree: "BE in Computer Science",
     institution: "M.S. Engineering College",
     period: "Aug 2019 – June 2023",
-    description: ""
+    description: "Specialized in AI and Machine Learning applications."
   }
 ];
 
 export const TESTIMONIALS: Testimonial[] = [];
-
 export const ARTICLES: Article[] = [];
 
 export const SOCIAL_LINKS = [

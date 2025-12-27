@@ -3,33 +3,63 @@ import { SOCIAL_LINKS } from '../constants';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-primary text-slate-300 py-12 border-t border-slate-700">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
-        <div>
-          <span className="text-lg font-bold text-white tracking-tight">
-            Hari <span className="text-accent">Charan</span>
+    <footer className="bg-white dark:bg-zinc-950 border-t-8 border-zinc-900 dark:border-white py-20 px-6">
+      <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
+        <div className="mb-12">
+          <span className="text-6xl md:text-8xl font-black text-zinc-900 dark:text-white uppercase tracking-tighter">
+            HARI<span className="outline-text">CHARAN</span>
           </span>
-          <p className="text-sm text-slate-400 mt-1">Data Scientist & Machine Learning Engineer</p>
         </div>
         
-        <div className="flex gap-4">
-          {SOCIAL_LINKS.map((link) => (
-            <a
-              key={link.platform}
-              href={link.url}
-              className="p-2 bg-white/10 rounded-full text-slate-300 hover:bg-accent hover:text-white transition-all transform hover:-translate-y-1"
-              aria-label={link.platform}
-            >
-              {link.icon}
-            </a>
-          ))}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20 w-full max-w-4xl">
+           <div className="p-8 brutal-border bg-zinc-50 dark:bg-zinc-900">
+              <p className="text-[10px] font-black uppercase mb-4 opacity-50">Focus_Area</p>
+              <p className="font-bold uppercase tracking-tight">Machine Learning</p>
+           </div>
+           <div className="p-8 brutal-border bg-zinc-50 dark:bg-zinc-900">
+              <p className="text-[10px] font-black uppercase mb-4 opacity-50">Stack_Main</p>
+              <p className="font-bold uppercase tracking-tight">Python / PyTorch</p>
+           </div>
+           <div className="p-8 brutal-border bg-zinc-50 dark:bg-zinc-900">
+              <p className="text-[10px] font-black uppercase mb-4 opacity-50">Region</p>
+              <p className="font-bold uppercase tracking-tight">Bengaluru, IN</p>
+           </div>
+           <div className="p-8 brutal-border bg-zinc-50 dark:bg-zinc-900">
+              <p className="text-[10px] font-black uppercase mb-4 opacity-50">Year</p>
+              <p className="font-bold uppercase tracking-tight">2024 / 2025</p>
+           </div>
         </div>
-        
-        <div className="text-sm text-slate-400 text-center md:text-right">
-          <p>© {new Date().getFullYear()} Katta Hari Charan.</p>
-          <p>All rights reserved.</p>
+
+        <div className="w-full flex flex-col md:flex-row items-center justify-between pt-12 border-t-2 border-zinc-200 dark:border-zinc-800 gap-10">
+          <div className="flex gap-6">
+            {SOCIAL_LINKS.map((link) => (
+              <a
+                key={link.platform}
+                href={link.url}
+                className="text-xs font-black uppercase tracking-widest hover:text-zinc-500 transition-colors"
+                aria-label={link.platform}
+              >
+                {link.platform}
+              </a>
+            ))}
+          </div>
+          
+          <div className="text-[10px] font-black uppercase tracking-[0.3em] opacity-40">
+            © Katta Hari Charan
+          </div>
         </div>
       </div>
+      
+      <style>{`
+        .outline-text {
+          -webkit-text-stroke: 2px #18181b;
+          color: transparent;
+        }
+        .dark .outline-text {
+          -webkit-text-stroke: 2px #fff;
+          color: transparent;
+        }
+      `}</style>
     </footer>
   );
 };

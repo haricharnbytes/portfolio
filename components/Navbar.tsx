@@ -8,7 +8,6 @@ const NAV_ITEMS = [
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
   { label: 'Experience', href: '#experience' },
-  { label: 'Education', href: '#education' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -25,7 +24,6 @@ export const Navbar: React.FC = () => {
   }, []);
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    // Only intercept internal links (starting with #)
     if (href.startsWith('#')) {
       e.preventDefault();
       const element = document.querySelector(href);
@@ -38,72 +36,68 @@ export const Navbar: React.FC = () => {
 
   return (
     <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled || isOpen ? 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b-2 border-black dark:border-white ${
+        isScrolled || isOpen ? 'bg-white/95 dark:bg-zinc-950/95 backdrop-blur-sm py-3' : 'bg-transparent py-5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
-        <a href="#" className="text-xl font-bold text-primary dark:text-white tracking-tight group">
-          <span className="group-hover:text-accent transition-colors">Hari</span> <span className="text-accent group-hover:text-primary dark:group-hover:text-white transition-colors">Charan</span>
+        <a href="#" className="text-xl font-black text-zinc-900 dark:text-white uppercase tracking-tighter">
+          Hari<span className="bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 px-1 ml-0.5">Charan</span>
         </a>
 
-        {/* Desktop Menu - visible on medium screens and up */}
-        <div className="hidden md:flex items-center space-x-6">
+        <div className="hidden md:flex items-center space-x-8">
           {NAV_ITEMS.map((item) => (
             <a
               key={item.label}
               href={item.href}
               onClick={(e) => handleNavClick(e, item.href)}
-              className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-accent dark:hover:text-accent transition-colors"
+              className="text-[10px] font-black uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors relative group"
             >
               {item.label}
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-zinc-900 dark:bg-white transition-all group-hover:w-full"></span>
             </a>
           ))}
+          <div className="h-4 w-px bg-zinc-200 dark:bg-zinc-800"></div>
+          <ThemeToggle />
           <a 
             href={HERO_DATA.resumeLink}
-            download="Katta_Hari_Charan_Resume.pdf"
-            className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-accent bg-accent/10 rounded-lg hover:bg-accent hover:text-white transition-colors"
+            className="flex items-center gap-2 px-4 py-2 text-[10px] font-black uppercase tracking-widest bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 brutal-border shadow-brutal-sm dark:shadow-brutal-white brutal-btn transition-all"
           >
-            <Download size={16} />
-            Resume
+            <Download size={12} />
+            CV
           </a>
-          <ThemeToggle />
         </div>
 
-        {/* Mobile Menu Button - hidden on medium screens and up */}
-        <div className="md:hidden flex items-center gap-4">
+        <div className="md:hidden flex items-center gap-3">
            <ThemeToggle />
            <button
-            className="text-primary dark:text-white focus:outline-none"
+            className="p-1.5 brutal-border bg-white dark:bg-zinc-800"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
-       
       </div>
 
-      {/* Mobile Menu Dropdown - hidden on medium screens and up */}
       {isOpen && (
-        <div className="md:hidden bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 absolute w-full shadow-lg h-screen overflow-y-auto pb-20">
-          <div className="flex flex-col px-6 py-6 space-y-6">
+        <div className="md:hidden bg-white dark:bg-zinc-950 border-t-2 border-black dark:border-white fixed inset-x-0 top-[68px] bottom-0 z-40 overflow-y-auto">
+          <div className="flex flex-col p-8 space-y-8">
             {NAV_ITEMS.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className="text-lg font-medium text-slate-600 dark:text-slate-300 hover:text-accent"
+                className="text-4xl font-black uppercase tracking-tighter text-zinc-900 dark:text-white"
               >
                 {item.label}
               </a>
             ))}
             <a 
               href={HERO_DATA.resumeLink}
-              download="Katta_Hari_Charan_Resume.pdf"
-              className="flex items-center justify-center gap-2 px-4 py-3 text-lg font-medium text-white bg-accent rounded-lg hover:bg-opacity-90 transition-colors"
+              className="flex items-center justify-center gap-3 p-6 text-xl font-black uppercase bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 brutal-border shadow-brutal dark:shadow-brutal-white"
             >
               <Download size={20} />
-              Download Resume
+              Resume
             </a>
           </div>
         </div>

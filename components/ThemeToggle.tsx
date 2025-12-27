@@ -25,10 +25,10 @@ export const ThemeToggle: React.FC = () => {
   return (
     <button
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-      className="p-2 rounded-full text-slate-500 hover:text-accent hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-accent transition-colors"
+      className="p-2 brutal-border bg-white dark:bg-zinc-800 text-zinc-900 dark:text-white shadow-brutal-sm dark:shadow-brutal-white transition-all brutal-btn"
       aria-label="Toggle Dark Mode"
     >
-      {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+      {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
     </button>
   );
 };

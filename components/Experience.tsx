@@ -1,38 +1,41 @@
 import React from 'react';
 import { Section } from './Section';
 import { JOBS } from '../constants';
-import { Briefcase, Calendar } from 'lucide-react';
+import { Calendar, ChevronRight } from 'lucide-react';
 
 export const Experience: React.FC = () => {
   return (
-    <Section id="experience" title="Work Experience" className="bg-white dark:bg-slate-800/50 transition-colors duration-300">
-      <div className="relative border-l-2 border-slate-200 dark:border-slate-700 ml-3 md:ml-6 space-y-12">
-        {JOBS.map((job) => (
-          <div key={job.id} className="relative pl-8 md:pl-12">
-            {/* Timeline Dot */}
-            <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-white dark:bg-slate-800 border-4 border-accent"></div>
+    <Section id="experience" title="Experience">
+      <div className="space-y-12 relative">
+        <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-1 bg-zinc-900 dark:bg-white hidden md:block -translate-x-1/2"></div>
+        
+        {JOBS.map((job, idx) => (
+          <div key={job.id} className={`flex flex-col md:flex-row gap-8 items-start relative ${idx % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
+            <div className="absolute left-[-10px] md:left-1/2 md:-translate-x-1/2 top-2 w-5 h-5 bg-zinc-900 dark:bg-white brutal-border z-10 shadow-brutal-sm"></div>
             
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-              <h3 className="text-xl font-bold text-primary dark:text-white">{job.role}</h3>
-              <div className="flex items-center text-sm font-medium text-accent mt-1 sm:mt-0">
-                <Calendar size={14} className="mr-1.5" />
-                {job.period}
+            <div className="w-full md:w-1/2">
+              <div className="bg-white dark:bg-zinc-900 brutal-border shadow-brutal dark:shadow-brutal-white p-6 md:p-8 hover:-translate-y-1 transition-all">
+                <div className="flex flex-col gap-2 mb-6">
+                  <div className="bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 px-3 py-0.5 text-[9px] font-black uppercase brutal-border inline-block self-start">
+                    {job.period}
+                  </div>
+                  <h3 className="text-2xl font-black uppercase tracking-tighter text-zinc-900 dark:text-white leading-tight">{job.role}</h3>
+                  <div className="font-black text-zinc-500 uppercase tracking-widest text-sm">
+                    {job.company}
+                  </div>
+                </div>
+                
+                <ul className="space-y-4">
+                  {job.description.map((item, index) => (
+                    <li key={index} className="flex items-start text-zinc-700 dark:text-zinc-300 font-bold leading-snug text-sm">
+                      <ChevronRight size={14} className="mr-2 mt-0.5 text-zinc-900 dark:text-white flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
-            
-            <div className="flex items-center text-slate-500 dark:text-slate-400 font-medium mb-4">
-              <Briefcase size={16} className="mr-2" />
-              {job.company}
-            </div>
-            
-            <ul className="space-y-2">
-              {job.description.map((item, index) => (
-                <li key={index} className="flex items-start text-slate-600 dark:text-slate-300 leading-relaxed text-sm md:text-base">
-                  <span className="mr-2 mt-2 w-1.5 h-1.5 bg-slate-300 dark:bg-slate-600 rounded-full flex-shrink-0"></span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
+            <div className="hidden md:block md:w-1/2"></div>
           </div>
         ))}
       </div>
