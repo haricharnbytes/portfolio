@@ -42,44 +42,41 @@ const TypingEffect = ({ words }: { words: string[] }) => {
 
 export const Hero: React.FC = () => {
   return (
-    <div className="relative min-h-[85vh] flex items-center justify-center pt-24 pb-12 overflow-hidden transition-colors duration-500">
-      {/* Background is clean and minimalist */}
-      
+    <div className="relative min-h-[90vh] flex items-center justify-center pt-24 pb-16 overflow-hidden transition-colors duration-500">
       <div className="max-w-7xl px-6 relative z-10 w-full">
         <div className="flex flex-col items-start text-left">
           <div className="relative group cursor-default mb-6 w-full animate-fade-in">
-            {/* Layered text shadow effect for depth on hover using subtle grey */}
             <span 
-              className="absolute inset-0 text-4xl sm:text-6xl md:text-8xl lg:text-[9.5rem] font-black text-transparent uppercase tracking-tighter leading-[0.85] select-none transition-all duration-500 group-hover:translate-x-3 group-hover:translate-y-3 group-hover:text-zinc-400/20 dark:group-hover:text-zinc-600/20"
+              className="absolute inset-0 text-5xl sm:text-6xl md:text-8xl lg:text-[9.5rem] font-black text-transparent uppercase tracking-tighter leading-[0.85] select-none transition-all duration-500 group-hover:translate-x-3 group-hover:translate-y-3 group-hover:text-zinc-400/20 dark:group-hover:text-zinc-600/20"
               aria-hidden="true"
             >
               {HERO_DATA.name}
             </span>
             
-            <h1 className="relative text-4xl sm:text-6xl md:text-8xl lg:text-[9.5rem] font-black text-zinc-900 dark:text-white uppercase tracking-tighter leading-[0.85] transition-all duration-300 whitespace-nowrap group-hover:text-zinc-500 dark:group-hover:text-zinc-400">
+            <h1 className="relative text-5xl sm:text-6xl md:text-8xl lg:text-[9.5rem] font-black text-zinc-900 dark:text-white uppercase tracking-tighter leading-[0.85] transition-all duration-300 group-hover:text-zinc-500 dark:group-hover:text-zinc-400">
               {HERO_DATA.name}
             </h1>
           </div>
           
-          <div className="text-xl md:text-4xl font-black uppercase tracking-tighter mb-12 h-14 md:h-16 flex items-center bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 px-6 brutal-border shadow-brutal dark:shadow-brutal-white transition-all transform hover:scale-[1.02] animate-fade-in delay-100">
+          <div className="text-xl md:text-4xl font-black uppercase tracking-tighter mb-10 h-14 md:h-16 flex items-center bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 px-6 brutal-border shadow-brutal dark:shadow-brutal-white transition-all transform hover:scale-[1.02] animate-fade-in delay-100">
              <TypingEffect words={HERO_DATA.roles} />
           </div>
           
-          <div className="flex flex-col lg:flex-row items-start lg:items-center gap-12 w-full max-w-6xl animate-fade-in delay-200">
+          <div className="flex flex-col lg:flex-row items-start lg:items-center gap-10 w-full max-w-6xl animate-fade-in delay-200">
             <p className="text-lg md:text-2xl text-zinc-600 dark:text-zinc-400 max-w-2xl font-bold leading-tight border-l-8 border-zinc-900 dark:border-white pl-8 py-2">
               {HERO_DATA.tagline}
             </p>
             
-            <div className="flex flex-col sm:flex-row items-center gap-6 w-full lg:w-auto mt-6 lg:mt-0">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full lg:w-auto mt-6 lg:mt-0">
               <a
                 href="#projects"
-                className="px-10 py-5 bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 text-base font-black uppercase tracking-widest brutal-border shadow-brutal dark:shadow-brutal-white transition-all brutal-btn w-full sm:w-auto text-center hover:translate-x-1 hover:-translate-y-1"
+                className="px-10 py-6 sm:py-5 bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 text-base font-black uppercase tracking-widest brutal-border shadow-brutal dark:shadow-brutal-white transition-all brutal-btn text-center hover:translate-x-1 hover:-translate-y-1 min-h-[56px] flex items-center justify-center"
               >
                 Explore Work
               </a>
               <a
                 href="#contact"
-                className="px-10 py-5 bg-white dark:bg-zinc-800 text-zinc-900 dark:text-white text-base font-black uppercase tracking-widest brutal-border shadow-brutal dark:shadow-brutal-white transition-all brutal-btn w-full sm:w-auto text-center hover:translate-x-1 hover:-translate-y-1"
+                className="px-10 py-6 sm:py-5 bg-white dark:bg-zinc-800 text-zinc-900 dark:text-white text-base font-black uppercase tracking-widest brutal-border shadow-brutal dark:shadow-brutal-white transition-all brutal-btn text-center hover:translate-x-1 hover:-translate-y-1 min-h-[56px] flex items-center justify-center"
               >
                 Contact
               </a>
@@ -88,9 +85,9 @@ export const Hero: React.FC = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 md:left-12 md:translate-x-0 group cursor-pointer" onClick={() => document.getElementById('about')?.scrollIntoView({behavior: 'smooth'})}>
-        <div className="p-4 brutal-border bg-white dark:bg-zinc-800 shadow-brutal group-hover:bg-zinc-900 group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-zinc-900 transition-all">
-          <ArrowDown size={24} className="animate-bounce" />
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 md:left-12 md:translate-x-0 group cursor-pointer" onClick={() => document.getElementById('about')?.scrollIntoView({behavior: 'smooth'})}>
+        <div className="p-4 brutal-border bg-white dark:bg-zinc-800 shadow-brutal group-hover:bg-zinc-900 group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-zinc-900 transition-all min-w-[56px] min-h-[56px] flex items-center justify-center">
+          <ArrowDown size={28} className="animate-bounce" />
         </div>
       </div>
 
