@@ -86,10 +86,10 @@ export const Navbar: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
           <a 
             href="#" 
-            className="text-xl font-black text-zinc-900 dark:text-white uppercase tracking-tighter"
+            className="text-lg sm:text-xl font-black text-zinc-900 dark:text-white uppercase tracking-tighter whitespace-nowrap"
             onClick={() => setIsOpen(false)}
           >
-            Hari <span className="bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 px-1 ml-0.5">Charan</span>
+          Hari <span className="bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 px-1 ml-0.5">Charan</span>
           </a>
 
           {/* Desktop Navigation */}

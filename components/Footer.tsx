@@ -3,11 +3,11 @@ import { SOCIAL_LINKS } from '../constants';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-white dark:bg-zinc-950 border-t-8 border-zinc-900 dark:border-white py-16 px-6">
+    <footer className="bg-white dark:bg-zinc-950 border-t-8 border-zinc-900 dark:border-white py-16 px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
         <div className="mb-10 w-full overflow-hidden">
-          <span className="text-5xl sm:text-7xl md:text-8xl font-black text-zinc-900 dark:text-white uppercase tracking-tighter block leading-none">
-            HARI<span className="outline-text"> CHARAN</span>
+          <span className="text-4xl sm:text-7xl md:text-8xl font-black text-zinc-900 dark:text-white uppercase tracking-tighter block leading-none whitespace-nowrap">
+            KATTA HARI<span className="outline-text"> CHARAN</span>
           </span>
         </div>
         

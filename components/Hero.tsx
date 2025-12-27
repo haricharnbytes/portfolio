@@ -45,14 +45,15 @@ export const Hero: React.FC = () => {
       <div className="max-w-7xl px-6 relative z-10 w-full">
         <div className="flex flex-col items-start text-left">
           <div className="relative group cursor-default mb-6 w-full animate-fade-in">
+            {/* Fluid typography using vw to ensure fit on all screens */}
             <span 
-              className="absolute inset-0 text-5xl sm:text-6xl md:text-8xl lg:text-[9.5rem] font-black text-transparent uppercase tracking-tighter leading-[0.85] select-none transition-all duration-500 group-hover:translate-x-3 group-hover:translate-y-3 group-hover:text-zinc-400/20 dark:group-hover:text-zinc-600/20"
+              className="absolute inset-0 text-[8vw] sm:text-[9vw] md:text-8xl lg:text-9xl font-black text-transparent uppercase tracking-tighter leading-[0.85] select-none transition-all duration-500 group-hover:translate-x-3 group-hover:translate-y-3 group-hover:text-zinc-400/20 dark:group-hover:text-zinc-600/20 whitespace-nowrap"
               aria-hidden="true"
             >
               {HERO_DATA.name}
             </span>
             
-            <h1 className="relative text-5xl sm:text-6xl md:text-8xl lg:text-[9.5rem] font-black text-zinc-900 dark:text-white uppercase tracking-tighter leading-[0.85] transition-all duration-300 group-hover:text-zinc-500 dark:group-hover:text-zinc-400">
+            <h1 className="relative text-[8vw] sm:text-[9vw] md:text-8xl lg:text-9xl font-black text-zinc-900 dark:text-white uppercase tracking-tighter leading-[0.85] transition-all duration-300 group-hover:text-zinc-500 dark:group-hover:text-zinc-400 whitespace-nowrap">
               {HERO_DATA.name}
             </h1>
           </div>
