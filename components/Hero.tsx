@@ -43,41 +43,29 @@ const TypingEffect = ({ words }: { words: string[] }) => {
 export const Hero: React.FC = () => {
   return (
     <div className="relative min-h-[85vh] flex items-center justify-center pt-24 pb-12 overflow-hidden transition-colors duration-500">
-      {/* Brutalist Background Elements */}
-      <div className="absolute inset-0 opacity-10 dark:opacity-20 pointer-events-none select-none overflow-hidden">
-         <div className="absolute top-[10%] left-[5%] text-[15vw] font-black text-zinc-900 dark:text-white leading-none border-b-[10px] border-zinc-900 dark:border-white select-none whitespace-nowrap">
-           DATA_SC
-         </div>
-         <div className="absolute bottom-[10%] right-[5%] text-[15vw] font-black text-zinc-900 dark:text-white leading-none outline-text-subtle opacity-30 select-none whitespace-nowrap">
-           GEN_AI
-         </div>
-      </div>
-
+      {/* Background is clean and minimalist */}
+      
       <div className="max-w-7xl px-6 relative z-10 w-full">
         <div className="flex flex-col items-start text-left">
-          <div className="inline-block px-4 py-1.5 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 font-black uppercase text-[10px] tracking-[0.2em] mb-8 brutal-border shadow-brutal-sm dark:shadow-brutal-white animate-fade-in">
-            Active Research & Deployment
-          </div>
-          
-          <div className="relative group cursor-default mb-6">
-            {/* Background layered text for hover depth effect */}
+          <div className="relative group cursor-default mb-6 w-full animate-fade-in">
+            {/* Layered text shadow effect for depth on hover using subtle grey */}
             <span 
-              className="absolute inset-0 text-4xl sm:text-6xl md:text-8xl lg:text-[9.5rem] font-black text-transparent uppercase tracking-tighter leading-[0.85] select-none transition-all duration-500 group-hover:translate-x-2 group-hover:translate-y-2 group-hover:text-teal-600/10 dark:group-hover:text-teal-400/10"
+              className="absolute inset-0 text-4xl sm:text-6xl md:text-8xl lg:text-[9.5rem] font-black text-transparent uppercase tracking-tighter leading-[0.85] select-none transition-all duration-500 group-hover:translate-x-3 group-hover:translate-y-3 group-hover:text-zinc-400/20 dark:group-hover:text-zinc-600/20"
               aria-hidden="true"
             >
               {HERO_DATA.name}
             </span>
             
-            <h1 className="relative text-4xl sm:text-6xl md:text-8xl lg:text-[9.5rem] font-black text-zinc-900 dark:text-white uppercase tracking-tighter leading-[0.85] transition-all duration-300 whitespace-nowrap group-hover:text-teal-600 dark:group-hover:text-teal-400">
+            <h1 className="relative text-4xl sm:text-6xl md:text-8xl lg:text-[9.5rem] font-black text-zinc-900 dark:text-white uppercase tracking-tighter leading-[0.85] transition-all duration-300 whitespace-nowrap group-hover:text-zinc-500 dark:group-hover:text-zinc-400">
               {HERO_DATA.name}
             </h1>
           </div>
           
-          <div className="text-xl md:text-4xl font-black uppercase tracking-tighter mb-12 h-14 md:h-16 flex items-center bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 px-6 brutal-border shadow-brutal dark:shadow-brutal-white transition-all transform hover:scale-[1.02]">
+          <div className="text-xl md:text-4xl font-black uppercase tracking-tighter mb-12 h-14 md:h-16 flex items-center bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 px-6 brutal-border shadow-brutal dark:shadow-brutal-white transition-all transform hover:scale-[1.02] animate-fade-in delay-100">
              <TypingEffect words={HERO_DATA.roles} />
           </div>
           
-          <div className="flex flex-col lg:flex-row items-start lg:items-center gap-12 w-full max-w-6xl">
+          <div className="flex flex-col lg:flex-row items-start lg:items-center gap-12 w-full max-w-6xl animate-fade-in delay-200">
             <p className="text-lg md:text-2xl text-zinc-600 dark:text-zinc-400 max-w-2xl font-bold leading-tight border-l-8 border-zinc-900 dark:border-white pl-8 py-2">
               {HERO_DATA.tagline}
             </p>
@@ -107,10 +95,6 @@ export const Hero: React.FC = () => {
       </div>
 
       <style>{`
-        .outline-text-subtle {
-          -webkit-text-stroke: 1px currentColor;
-          color: transparent;
-        }
         @keyframes fade-in {
           from { opacity: 0; transform: translateY(10px); }
           to { opacity: 1; transform: translateY(0); }
@@ -118,6 +102,8 @@ export const Hero: React.FC = () => {
         .animate-fade-in {
           animation: fade-in 0.6s ease-out forwards;
         }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
       `}</style>
     </div>
   );
