@@ -93,9 +93,9 @@ export const SKILLS: Skill[] = [
   { name: "Scikit-Learn", icon: "scikitlearn", category: "Machine Learning" },
   { name: "XGBoost", icon: "https://commons.wikimedia.org/wiki/Special:FilePath/XGBoost_logo.svg", category: "Machine Learning" },
   
-  { name: "OpenAI", icon: "https://cdn-icons-png.flaticon.com/512/18269/18269957.png", category: "Generative AI & NLP" },
+  { name: "LLMs", icon: "https://cdn-icons-png.flaticon.com/512/18269/18269957.png", category: "Generative AI & NLP" },
   { name: "Hugging Face", icon: "huggingface", category: "Generative AI & NLP" },
-  { name: "LangChain", icon: "python", category: "Generative AI & NLP" },
+  { name: "LangChain", icon: "https://upload.wikimedia.org/wikipedia/commons/6/60/LangChain_Logo.svg", category: "Generative AI & NLP" },
   { name: "Transformers", icon: "google", category: "Generative AI & NLP" },
   
   { name: "Keras", icon: "keras", category: "Deep Learning Frameworks" },

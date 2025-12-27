@@ -48,7 +48,7 @@ export const Contact: React.FC = () => {
               Initiate_<br />Contact
             </h3>
             <p className="text-lg font-bold mb-12 opacity-80 leading-tight max-w-sm">
-              Open for collaboration on predictive systems, LLM pipelines, and deep learning research.
+              Open for collaboration on predictive systems, LLM pipelines and deep learning research.
             </p>
             
             <div className="space-y-8 md:space-y-10">
