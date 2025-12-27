@@ -18,8 +18,7 @@ export const ABOUT_DATA = {
   bio: "Machine Learning & Deep Learning Engineer with 2 years’ experience designing predictive models for agriculture and real estate. Delivered 85% accuracy in regression tasks by integrating UAV, Sentinel, and ground data using advanced algorithms. Expert in feature engineering, model optimization, and data visualization to drive actionable, data-driven insights.",
   goals: "I am currently looking for opportunities to leverage my skills in Deep Learning and Generative AI to drive innovation in industry sectors. My goal is to build AI systems that are not only accurate but also ethical and explainable.",
   location: "Bengaluru, India",
-  email: "hccharankatta@gmail.com",
-  image: "https://picsum.photos/400/400?grayscale"
+  email: "hccharankatta@gmail.com"
 };
 
 export const PROJECTS: Project[] = [
@@ -94,7 +93,7 @@ export const SKILLS: Skill[] = [
   { name: "Scikit-Learn", icon: "scikitlearn", category: "Machine Learning" },
   { name: "XGBoost", icon: "https://commons.wikimedia.org/wiki/Special:FilePath/XGBoost_logo.svg", category: "Machine Learning" },
   
-  { name: "OpenAI", icon: "https://svglogo.co/logo/openai.svg", category: "Generative AI & NLP" },
+  { name: "OpenAI", icon: "https://cdn-icons-png.flaticon.com/512/18269/18269957.png", category: "Generative AI & NLP" },
   { name: "Hugging Face", icon: "huggingface", category: "Generative AI & NLP" },
   { name: "LangChain", icon: "python", category: "Generative AI & NLP" },
   { name: "Transformers", icon: "google", category: "Generative AI & NLP" },
