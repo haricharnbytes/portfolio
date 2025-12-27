@@ -5,7 +5,7 @@ import { ABOUT_DATA, SOCIAL_LINKS } from '../constants';
 
 export const Contact: React.FC = () => {
   return (
-    <Section id="contact" title="Protocol">
+    <Section id="contact" title="Contact">
       <div className="grid grid-cols-1 lg:grid-cols-12 brutal-border shadow-brutal-lg dark:shadow-brutal-white bg-white dark:bg-zinc-900">
         
         {/* Contact Info Sidebar */}

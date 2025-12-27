@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Project, Job, Skill, EducationItem, Testimonial, Article } from './types';
 import { Github, Linkedin, Mail, Twitter, BookOpen } from 'lucide-react';
@@ -85,20 +84,20 @@ export const JOBS: Job[] = [
 
 export const SKILLS: Skill[] = [
   { name: "Python", icon: "python", category: "Languages" },
-  { name: "SQL", icon: "postgresql", category: "Languages" },
+  { name: "SQL", icon: "mysql", category: "Languages" },
   
   { name: "Pandas", icon: "pandas", category: "Data Analysis & Visualization" },
   { name: "NumPy", icon: "numpy", category: "Data Analysis & Visualization" },
-  { name: "Matplotlib", icon: "matplotlib", category: "Data Analysis & Visualization" },
+  { name: "Matplotlib", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg", category: "Data Analysis & Visualization" },
   { name: "Plotly", icon: "plotly", category: "Data Analysis & Visualization" },
 
   { name: "Scikit-Learn", icon: "scikitlearn", category: "Machine Learning" },
-  { name: "XGBoost", icon: "xgboost", category: "Machine Learning" },
+  { name: "XGBoost", icon: "https://commons.wikimedia.org/wiki/Special:FilePath/XGBoost_logo.svg", category: "Machine Learning" },
   
-  { name: "OpenAI", icon: "openai", category: "Generative AI & NLP" },
+  { name: "OpenAI", icon: "https://svglogo.co/logo/openai.svg", category: "Generative AI & NLP" },
   { name: "Hugging Face", icon: "huggingface", category: "Generative AI & NLP" },
   { name: "LangChain", icon: "python", category: "Generative AI & NLP" },
-  { name: "Transformers", icon: "huggingface", category: "Generative AI & NLP" },
+  { name: "Transformers", icon: "google", category: "Generative AI & NLP" },
   
   { name: "Keras", icon: "keras", category: "Deep Learning Frameworks" },
   { name: "TensorFlow", icon: "tensorflow", category: "Deep Learning Frameworks" },
@@ -107,7 +106,7 @@ export const SKILLS: Skill[] = [
   { name: "Jupyter", icon: "jupyter", category: "Development & Collaboration Tools" },
   { name: "Git", icon: "git", category: "Development & Collaboration Tools" },
   { name: "GitHub", icon: "github", category: "Development & Collaboration Tools" },
-  { name: "VS Code", icon: "visualstudiocode", category: "Development & Collaboration Tools" },
+  { name: "VS Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-plain.svg", category: "Development & Collaboration Tools" },
   { name: "Google Colab", icon: "googlecolab", category: "Development & Collaboration Tools" },
 ];
 

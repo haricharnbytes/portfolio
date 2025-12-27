@@ -7,7 +7,7 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
         <div className="mb-12">
           <span className="text-6xl md:text-8xl font-black text-zinc-900 dark:text-white uppercase tracking-tighter">
-            HARI<span className="outline-text">CHARAN</span>
+            HARI<span className="outline-text"> CHARAN</span>
           </span>
         </div>
         
@@ -26,7 +26,7 @@ export const Footer: React.FC = () => {
            </div>
            <div className="p-8 brutal-border bg-zinc-50 dark:bg-zinc-900">
               <p className="text-[10px] font-black uppercase mb-4 opacity-50">Year</p>
-              <p className="font-bold uppercase tracking-tight">2024 / 2025</p>
+              <p className="font-bold uppercase tracking-tight">2025</p>
            </div>
         </div>
 

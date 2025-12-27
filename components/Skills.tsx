@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Section } from './Section';
 import { SKILLS } from '../constants';
@@ -40,16 +39,16 @@ export const Skills: React.FC = () => {
                   title={skill.name}
                   className="group flex flex-col items-center justify-center p-2 brutal-border bg-zinc-50 dark:bg-zinc-800 hover:bg-zinc-900 dark:hover:bg-white hover:text-white dark:hover:text-zinc-900 transition-all duration-200 aspect-square"
                 >
-                  <div className="w-6 h-6 mb-1.5 flex items-center justify-center pointer-events-none">
+                  <div className="w-8 h-8 mb-1.5 flex items-center justify-center pointer-events-none">
                     <img 
-                      src={`https://cdn.simpleicons.org/${skill.icon}/${isDark ? 'ffffff' : '000000'}`}
+                      src={skill.icon.startsWith('http') ? skill.icon : `https://cdn.simpleicons.org/${skill.icon}/${isDark ? 'ffffff' : '000000'}`}
                       alt={`${skill.name} logo`}
-                      className="w-5 h-5 object-contain"
+                      className="w-full h-full object-contain"
                       loading="lazy"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
                         // Final fallback if the icon is unavailable or slug is slightly off
-                        if (!target.src.includes('666666')) {
+                        if (!target.src.includes('666666') && !skill.icon.startsWith('http')) {
                           target.src = `https://cdn.simpleicons.org/${skill.icon}/666666`;
                         }
                       }}
