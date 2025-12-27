@@ -89,7 +89,7 @@ export const Navbar: React.FC = () => {
             className="text-xl font-black text-zinc-900 dark:text-white uppercase tracking-tighter"
             onClick={() => setIsOpen(false)}
           >
-            Hari<span className="bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 px-1 ml-0.5">Charan</span>
+            Hari <span className="bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 px-1 ml-0.5">Charan</span>
           </a>
 
           {/* Desktop Navigation */}

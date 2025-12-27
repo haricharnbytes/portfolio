@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowDown } from 'lucide-react';
 import { HERO_DATA } from '../constants';
 
 const TypingEffect = ({ words }: { words: string[] }) => {
@@ -82,12 +81,6 @@ export const Hero: React.FC = () => {
               </a>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 md:left-12 md:translate-x-0 group cursor-pointer" onClick={() => document.getElementById('about')?.scrollIntoView({behavior: 'smooth'})}>
-        <div className="p-4 brutal-border bg-white dark:bg-zinc-800 shadow-brutal group-hover:bg-zinc-900 group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-zinc-900 transition-all min-w-[56px] min-h-[56px] flex items-center justify-center">
-          <ArrowDown size={28} className="animate-bounce" />
         </div>
       </div>
 
