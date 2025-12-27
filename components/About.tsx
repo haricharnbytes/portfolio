@@ -5,7 +5,7 @@ import { MapPin, Target } from 'lucide-react';
 
 export const About: React.FC = () => {
   return (
-    <Section id="about" title="Identity">
+    <Section id="about" title="About">
       <div className="flex flex-col gap-10 items-start max-w-5xl mx-auto w-full">
         <div className="w-full">
           <div className="bg-white dark:bg-zinc-900 brutal-border shadow-brutal dark:shadow-brutal-white p-6 sm:p-10 md:p-12">
