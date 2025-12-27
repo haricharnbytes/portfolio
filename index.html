@@ -39,6 +39,7 @@
           linear-gradient(#e5e7eb 1px, transparent 1px),
           linear-gradient(90deg, #e5e7eb 1px, transparent 1px);
         background-size: 40px 40px;
+        transition: background-color 0.3s ease, color 0.3s ease;
       }
       .dark body {
         background-color: #09090b;
@@ -79,7 +80,7 @@
 }
 </script>
 </head>
-  <body class="text-zinc-900 antialiased selection:bg-black selection:text-white dark:text-zinc-100 transition-colors duration-300 overflow-x-hidden">
+  <body class="text-zinc-900 antialiased selection:bg-black selection:text-white dark:text-zinc-100 overflow-x-hidden">
     <div id="root"></div>
     <script type="module" src="index.tsx"></script>
   </body>
