@@ -64,7 +64,7 @@ export const Navbar: React.FC = () => {
             className="flex items-center gap-2 px-4 py-2 text-[10px] font-black uppercase tracking-widest bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 brutal-border shadow-brutal-sm dark:shadow-brutal-white brutal-btn transition-all"
           >
             <Download size={12} />
-            CV
+            Resume
           </a>
         </div>
 
