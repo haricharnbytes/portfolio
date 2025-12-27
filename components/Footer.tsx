@@ -31,15 +31,18 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="w-full flex flex-col md:flex-row items-center justify-between pt-12 border-t-2 border-zinc-200 dark:border-zinc-800 gap-10">
-          <div className="flex gap-6">
+          <div className="flex flex-wrap justify-center gap-4">
             {SOCIAL_LINKS.map((link) => (
               <a
                 key={link.platform}
                 href={link.url}
-                className="text-xs font-black uppercase tracking-widest hover:text-zinc-500 transition-colors"
+                className="flex items-center gap-3 px-4 py-2 brutal-border bg-white dark:bg-zinc-900 shadow-brutal-sm dark:shadow-brutal-white hover:bg-zinc-900 hover:text-white dark:hover:bg-white dark:hover:text-zinc-900 transition-all transform hover:-translate-y-1 hover:translate-x-1"
                 aria-label={link.platform}
               >
-                {link.platform}
+                {link.icon}
+                <span className="text-[10px] font-black uppercase tracking-widest hidden sm:inline">
+                  {link.platform}
+                </span>
               </a>
             ))}
           </div>
