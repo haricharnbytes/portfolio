@@ -157,7 +157,6 @@ export const Navbar: React.FC = () => {
             <div className="pt-4 px-2">
               <a 
                 href={HERO_DATA.resumeLink}
-                target="_blank"
                 rel="noopener noreferrer"
                 download="Charan_s_Resume.pdf"
                 className={`flex items-center justify-center gap-3 w-full p-5 text-lg font-black uppercase bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 brutal-border shadow-brutal dark:shadow-brutal-white transition-all ${
