@@ -14,11 +14,11 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mb-16 w-full max-w-4xl">
            <div className="p-6 md:p-8 brutal-border bg-zinc-50 dark:bg-zinc-900 flex flex-col justify-center items-center">
               <p className="text-[10px] font-black uppercase mb-3 opacity-50">Focus_Area</p>
-              <p className="font-bold uppercase tracking-tight text-sm sm:text-base">Machine Learning</p>
+              <p className="font-bold uppercase tracking-tight text-sm sm:text-base">ML / DL / Generative AI</p>
            </div>
            <div className="p-6 md:p-8 brutal-border bg-zinc-50 dark:bg-zinc-900 flex flex-col justify-center items-center">
               <p className="text-[10px] font-black uppercase mb-3 opacity-50">Stack_Main</p>
-              <p className="font-bold uppercase tracking-tight text-sm sm:text-base">Python / PyTorch</p>
+              <p className="font-bold uppercase tracking-tight text-sm sm:text-base">Python / Tensorflow / PyTorch/ LangChain</p>
            </div>
            <div className="p-6 md:p-8 brutal-border bg-zinc-50 dark:bg-zinc-900 flex flex-col justify-center items-center">
               <p className="text-[10px] font-black uppercase mb-3 opacity-50">Region</p>
