@@ -89,7 +89,7 @@ export const Navbar: React.FC = () => {
             className="text-lg sm:text-xl font-black text-zinc-900 dark:text-white uppercase tracking-tighter whitespace-nowrap"
             onClick={() => setIsOpen(false)}
           >
-          Hari <span className="bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 px-1 ml-0.5">Charan</span>
+            Katta Hari <span className="bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 px-1 ml-0.5">Charan</span>
           </a>
 
           {/* Desktop Navigation */}
@@ -109,6 +109,8 @@ export const Navbar: React.FC = () => {
             <ThemeToggle />
             <a 
               href={HERO_DATA.resumeLink}
+              target="_blank"
+              rel="noopener noreferrer"
               download="Katta_Hari_Charan_Resume.pdf"
               className="flex items-center gap-2 px-4 py-2 text-[10px] font-black uppercase tracking-widest bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 brutal-border shadow-brutal-sm dark:shadow-brutal-white brutal-btn transition-all"
             >
@@ -155,6 +157,8 @@ export const Navbar: React.FC = () => {
             <div className="pt-4 px-2">
               <a 
                 href={HERO_DATA.resumeLink}
+                target="_blank"
+                rel="noopener noreferrer"
                 download="Katta_Hari_Charan_Resume.pdf"
                 className={`flex items-center justify-center gap-3 w-full p-5 text-lg font-black uppercase bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 brutal-border shadow-brutal dark:shadow-brutal-white transition-all ${
                   isOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'

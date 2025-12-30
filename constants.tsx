@@ -11,7 +11,11 @@ export const HERO_DATA = {
     "AI Engineer",
   ],
   tagline: "Turning raw data into actionable business insights through predictive modeling, deep learning, and intuitive visualization.",
-  resumeLink: "/resume.pdf"
+  // NOTE: To fix the "blank download" issue:
+  // 1. If local: Ensure 'resume.pdf' exists in your public root folder.
+  // 2. If Cloud: Use a direct download link (e.g., Google Drive uc?export=download format).
+  // Using a valid sample PDF for demonstration purposes.
+  resumeLink: "https://drive.google.com/file/d/1zOHEnPEXColDiAzAjTtAnhdB8z13zZHS/view?usp=sharing"
 };
 
 export const ABOUT_DATA = {
@@ -93,9 +97,9 @@ export const SKILLS: Skill[] = [
   { name: "Scikit-Learn", icon: "scikitlearn", category: "Machine Learning" },
   { name: "XGBoost", icon: "https://commons.wikimedia.org/wiki/Special:FilePath/XGBoost_logo.svg", category: "Machine Learning" },
   
-  { name: "LLMs", icon: "https://cdn-icons-png.flaticon.com/512/18269/18269957.png", category: "Generative AI & NLP" },
+  { name: "OpenAI", icon: "https://cdn-icons-png.flaticon.com/512/18269/18269957.png", category: "Generative AI & NLP" },
   { name: "Hugging Face", icon: "huggingface", category: "Generative AI & NLP" },
-  { name: "LangChain", icon: "https://upload.wikimedia.org/wikipedia/commons/6/60/LangChain_Logo.svg", category: "Generative AI & NLP" },
+  { name: "LangChain", icon: "https://www.streamlinehq.com/icons/download/langchain--31088", category: "Generative AI & NLP" },
   { name: "Transformers", icon: "google", category: "Generative AI & NLP" },
   
   { name: "Keras", icon: "keras", category: "Deep Learning Frameworks" },
