@@ -159,7 +159,7 @@ export const Navbar: React.FC = () => {
                 href={HERO_DATA.resumeLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                download="Katta_Hari_Charan_Resume.pdf"
+                download="Charan_s_Resume.pdf"
                 className={`flex items-center justify-center gap-3 w-full p-5 text-lg font-black uppercase bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 brutal-border shadow-brutal dark:shadow-brutal-white transition-all ${
                   isOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
                 }`}

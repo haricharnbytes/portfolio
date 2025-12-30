@@ -15,7 +15,7 @@ export const HERO_DATA = {
   // 1. If local: Ensure 'resume.pdf' exists in your public root folder.
   // 2. If Cloud: Use a direct download link (e.g., Google Drive uc?export=download format).
   // Using a valid sample PDF for demonstration purposes.
-  resumeLink: "https://drive.google.com/file/d/1zOHEnPEXColDiAzAjTtAnhdB8z13zZHS/view?usp=sharing"
+  resumeLink: "/Charan_s_Resume.pdf"
 };
 
 export const ABOUT_DATA = {
