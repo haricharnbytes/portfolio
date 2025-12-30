@@ -16,11 +16,11 @@ Contact – Connect with me via email or social links.
 
 ## Built With
 
-| Feature / Tool        | Details                                  |
-|----------------------|-----------------------------------------|
-| Frontend Framework    | React                                   |
-| Language              | TypeScript                              |
-| Bundler / Dev Tool    | Vite                                    |
-| Markup                | HTML (in public folder)                 |
-| Styles                | Tailwind CSS                            |
-| Deployment            | Hosted on Vercel                        |
+| Feature / Tool         | Details                                |
+|-----------------------|----------------------------------------|
+| Frontend Framework     | React                                  |
+| Language               | TypeScript                             |
+| Build Tool / Dev Server| Vite                                   |
+| Styling                | Plain CSS / inline styles              |
+| Icons                  | lucide-react                           |
+| Deployment             | Vercel                                 |
