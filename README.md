@@ -1,10 +1,12 @@
 ## My Personal Portfolio
 
-Welcome to my personal portfolio! This website showcases my skills, projects, and experiences as a [Your Role, e.g., Frontend Developer, Designer, AI Enthusiast].
+Welcome to my personal portfolio! This website showcases my skills, projects, and experiences as a AI Enthusiast.
 
 You can explore my work, learn more about me, and get in touch if you’d like to collaborate.
 
-This portfolio features
+[Charan's Portfolio](https://charanportfolio-theta.vercel.app/)
+
+This portfolio features :
 
 About Me – Learn who I am, my background, and my interests.
 
