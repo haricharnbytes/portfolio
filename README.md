@@ -4,18 +4,25 @@ Welcome to my portfolio repository! This is the source code for my personal webs
 
 [My Portfolio](https://charanportfolio-theta.vercel.app/)
 
-About Me
-
-Hi! I’m Charan — a passionate developer (you can describe your role here — e.g., Web Developer, AI/ML Enthusiast, Full-Stack Developer, Data Scientist, etc.*).
-I built this website to showcase my skills, projects, and experiences, and to make it easier for you to connect with me.
-
-I enjoy building responsive, modern, and user-friendly web experiences.
-
-Tech Stack
+## Tech Stack
 
 This portfolio is built using modern web technologies:
 
-Frontend: HTML, CSS, JavaScript (or React/Next.js/Tailwind if applicable)
+### Frontend
+- **React** – A JavaScript library for building user interfaces
+- **TypeScript** – Adds static typing for safer and scalable code
+- **Lucide-React** – Icon library for React
+
+### Build Tools
+- **Vite** – Fast frontend build tool and development server
+- **@vitejs/plugin-react** – Enables React support in Vite
+
+### Development
+- **Node.js** – JavaScript runtime
+- **npm** – Dependency management
+
+### Hosting
+- **Vercel** – Cloud platform for frontend deployment
 
 Hosting: Deployed on Vercel
 
