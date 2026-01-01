@@ -27,19 +27,16 @@ export const Education: React.FC = () => {
               <h3 className="text-3xl font-black uppercase tracking-tighter text-zinc-900 dark:text-white mb-2 leading-[0.9] group-hover:translate-x-1 transition-transform duration-500">
                 {edu.degree}
               </h3>
-              <p className="text-lg font-bold text-zinc-500 uppercase tracking-tight mb-6 transition-colors duration-500 group-hover:text-zinc-900 dark:group-hover:text-zinc-300">
+              <p className="text-lg font-bold text-zinc-500 uppercase tracking-tight mb-1 transition-colors duration-500 group-hover:text-zinc-900 dark:group-hover:text-zinc-300">
                 {edu.institution}
+              </p>
+              <p className="text-sm font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-tight mb-6 transition-colors duration-500 group-hover:text-zinc-600 dark:group-hover:text-zinc-400">
+                Visvesvaraya Technological University
               </p>
               
               {/* Subtle underline that expands on hover */}
-              <div className="h-1 w-12 bg-zinc-900 dark:bg-white mb-6 transition-all duration-500 group-hover:w-full opacity-30 group-hover:opacity-100"></div>
+              <div className="h-1 w-12 bg-zinc-900 dark:bg-white mb-2 transition-all duration-500 group-hover:w-full opacity-30 group-hover:opacity-100"></div>
             </div>
-            
-            {edu.description && (
-              <p className="text-sm text-zinc-600 dark:text-zinc-400 font-bold leading-relaxed border-t-2 border-zinc-100 dark:border-zinc-800 pt-6 group-hover:border-zinc-200 dark:group-hover:border-zinc-700 transition-colors duration-500">
-                {edu.description}
-              </p>
-            )}
 
             {/* Corner Decorative Element */}
             <div className="absolute bottom-0 right-0 w-8 h-8 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none" 

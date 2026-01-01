@@ -114,7 +114,7 @@ export const SKILLS: Skill[] = [
 export const EDUCATION: EducationItem[] = [
   {
     id: 1,
-    degree: "BE in Computer Science",
+    degree: "B.E in Computer Science and Engineering",
     institution: "M.S. Engineering College",
     period: "Aug 2019 – June 2023",
     description: "Specialized in AI and Machine Learning applications."
