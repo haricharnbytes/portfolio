@@ -1,20 +1,36 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+Charan’s Portfolio
 
-# Run and deploy your AI Studio app
+Welcome to my portfolio repository! This is the source code for my personal website where I showcase who I am, what I’ve built, and how to get in touch with me.
 
-This contains everything you need to run your app locally.
+[My Portfolio](https://charanportfolio-theta.vercel.app/)
 
-View your app in AI Studio: https://ai.studio/apps/drive/1es5_Ha49z27V7NnEI73stieyLb7qcFZU
+About Me
 
-## Run Locally
+Hi! I’m Charan — a passionate developer (you can describe your role here — e.g., Web Developer, AI/ML Enthusiast, Full-Stack Developer, Data Scientist, etc.*).
+I built this website to showcase my skills, projects, and experiences, and to make it easier for you to connect with me.
 
-**Prerequisites:**  Node.js
+I enjoy building responsive, modern, and user-friendly web experiences.
 
+Tech Stack
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+This portfolio is built using modern web technologies:
+
+Frontend: HTML, CSS, JavaScript (or React/Next.js/Tailwind if applicable)
+
+Hosting: Deployed on Vercel
+
+(Update according to your actual tech stack)
+
+Sections
+
+Here’s what you’ll find on the site:
+
+Home: A brief introduction about me.
+
+About: My background and journey.
+
+Skills: Tech and tools I’ve worked with.
+
+Projects: My featured work and links to live demos + code.
+
+Contact: Ways to get in touch with me.
