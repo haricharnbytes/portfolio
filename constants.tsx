@@ -6,15 +6,10 @@ export const HERO_DATA = {
   name: "Katta Hari Charan",
   title: "Data Scientist & ML Engineer",
   roles: [
-    "Data Scientist",
     "Machine Learning Engineer",
     "AI Engineer",
   ],
   tagline: "Turning raw data into actionable business insights through predictive modeling, deep learning, and intuitive visualization.",
-  // NOTE: To fix the "blank download" issue:
-  // 1. If local: Ensure 'resume.pdf' exists in your public root folder.
-  // 2. If Cloud: Use a direct download link (e.g., Google Drive uc?export=download format).
-  // Using a valid sample PDF for demonstration purposes.
   resumeLink: "https://drive.google.com/uc?export=download&id=1zOHEnPEXColDiAzAjTtAnhdB8z13zZHS"
 };
 
@@ -33,7 +28,8 @@ export const PROJECTS: Project[] = [
     impact: "Reduced content production time by 60% and enhanced creative output consistency.",
     tags: ["OpenAI", "PyTorch", "FastAPI", "Stable Diffusion"],
     category: "Generative AI",
-    imageUrl: "https://picsum.photos/600/400?random=10",
+    iconName: "Sparkles",
+    imageUrl: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
     repoUrl: "https://github.com/haricharnbytes",
     demoUrl: "#"
   },
@@ -44,7 +40,8 @@ export const PROJECTS: Project[] = [
     impact: "Achieved 95% classification accuracy, streamlining diagnostic screening processes.",
     tags: ["TensorFlow", "Keras", "OpenCV", "CNN"],
     category: "Deep Learning",
-    imageUrl: "https://picsum.photos/600/400?random=11",
+    iconName: "Brain",
+    imageUrl: "https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=80&w=800",
     repoUrl: "https://github.com/haricharnbytes",
     demoUrl: "#"
   },
@@ -55,7 +52,8 @@ export const PROJECTS: Project[] = [
     impact: "Increased sales forecast accuracy by 18% for regional stakeholders.",
     tags: ["Scikit-Learn", "XGBoost", "Pandas", "Matplotlib"],
     category: "ML",
-    imageUrl: "https://picsum.photos/600/400?random=12",
+    iconName: "Home",
+    imageUrl: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800",
     repoUrl: "https://github.com/haricharnbytes",
     demoUrl: "#"
   }
@@ -75,7 +73,7 @@ export const JOBS: Job[] = [
   },
   {
     id: 2,
-    role: "Data Scientist Intern",
+    role: "Machine Learning Intern",
     company: "Aditi Software",
     period: "Oct 2023 - Dec 2023",
     description: [
@@ -92,14 +90,14 @@ export const SKILLS: Skill[] = [
   { name: "Pandas", icon: "pandas", category: "Data Analysis & Visualization" },
   { name: "NumPy", icon: "numpy", category: "Data Analysis & Visualization" },
   { name: "Matplotlib", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg", category: "Data Analysis & Visualization" },
-  { name: "Plotly", icon: "plotly", category: "Data Analysis & Visualization" },
-
+  
+  
   { name: "Scikit-Learn", icon: "scikitlearn", category: "Machine Learning" },
   { name: "XGBoost", icon: "https://commons.wikimedia.org/wiki/Special:FilePath/XGBoost_logo.svg", category: "Machine Learning" },
   
   { name: "OpenAI", icon: "https://cdn-icons-png.flaticon.com/512/18269/18269957.png", category: "Generative AI & NLP" },
   { name: "Hugging Face", icon: "huggingface", category: "Generative AI & NLP" },
-  { name: "LangChain", icon: "https://www.streamlinehq.com/icons/download/langchain--31088", category: "Generative AI & NLP" },
+  { name: "LangChain", icon: "langchain", category: "Generative AI & NLP" },
   { name: "Transformers", icon: "google", category: "Generative AI & NLP" },
   
   { name: "Keras", icon: "keras", category: "Deep Learning Frameworks" },

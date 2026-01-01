@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { HERO_DATA } from '../constants';
+import { Download } from 'lucide-react';
 
 const TypingEffect = ({ words }: { words: string[] }) => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -44,39 +45,50 @@ export const Hero: React.FC = () => {
     <div className="relative min-h-[90vh] flex items-center justify-center pt-24 pb-16 overflow-hidden transition-colors duration-500">
       <div className="max-w-7xl px-6 relative z-10 w-full">
         <div className="flex flex-col items-start text-left">
-          <div className="relative group cursor-default mb-6 w-full animate-fade-in">
-            {/* Fluid typography using vw to ensure fit on all screens */}
+          <div className="relative group cursor-default mb-6 w-full reveal-on-scroll is-visible overflow-hidden md:overflow-visible">
+            {/* Fluid typography using clamp to ensure fit on all screens */}
             <span 
-              className="absolute inset-0 text-[8vw] sm:text-[9vw] md:text-8xl lg:text-9xl font-black text-transparent uppercase tracking-tighter leading-[0.85] select-none transition-all duration-500 group-hover:translate-x-3 group-hover:translate-y-3 group-hover:text-zinc-400/20 dark:group-hover:text-zinc-600/20 whitespace-nowrap"
+              className="absolute inset-0 text-[clamp(2.5rem,10vw,8rem)] font-black text-transparent uppercase tracking-tighter leading-[0.85] select-none transition-all duration-500 group-hover:translate-x-3 group-hover:translate-y-3 group-hover:text-zinc-400/20 dark:group-hover:text-zinc-600/20 whitespace-normal sm:whitespace-nowrap"
               aria-hidden="true"
             >
               {HERO_DATA.name}
             </span>
             
-            <h1 className="relative text-[8vw] sm:text-[9vw] md:text-8xl lg:text-9xl font-black text-zinc-900 dark:text-white uppercase tracking-tighter leading-[0.85] transition-all duration-300 group-hover:text-zinc-500 dark:group-hover:text-zinc-400 whitespace-nowrap">
+            <h1 className="relative text-[clamp(2.5rem,10vw,8rem)] font-black text-zinc-900 dark:text-white uppercase tracking-tighter leading-[0.85] transition-all duration-300 group-hover:text-zinc-500 dark:group-hover:text-zinc-400 whitespace-normal sm:whitespace-nowrap">
               {HERO_DATA.name}
             </h1>
           </div>
           
-          <div className="text-xl md:text-4xl font-black uppercase tracking-tighter mb-10 h-14 md:h-16 flex items-center bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 px-6 brutal-border shadow-brutal dark:shadow-brutal-white transition-all transform hover:scale-[1.02] animate-fade-in delay-100">
+          <div className="text-xl md:text-4xl font-black uppercase tracking-tighter mb-10 h-auto min-h-[56px] md:h-16 flex items-center bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 px-6 brutal-border shadow-brutal dark:shadow-brutal-white transition-all transform hover:scale-[1.02] reveal-on-scroll is-visible" style={{ animationDelay: '200ms' }}>
              <TypingEffect words={HERO_DATA.roles} />
           </div>
           
-          <div className="flex flex-col lg:flex-row items-start lg:items-center gap-10 w-full max-w-6xl animate-fade-in delay-200">
+          <div className="flex flex-col lg:flex-row items-start lg:items-center gap-10 w-full max-w-6xl reveal-on-scroll is-visible" style={{ animationDelay: '400ms' }}>
             <p className="text-lg md:text-2xl text-zinc-600 dark:text-zinc-400 max-w-2xl font-bold leading-tight border-l-8 border-zinc-900 dark:border-white pl-8 py-2">
               {HERO_DATA.tagline}
             </p>
             
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full lg:w-auto mt-6 lg:mt-0">
+              {/* Mobile Only Resume Button */}
+              <a
+                href={HERO_DATA.resumeLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex sm:hidden px-8 py-5 bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 text-sm font-black uppercase tracking-widest brutal-border shadow-brutal dark:shadow-brutal-white transition-all brutal-btn text-center items-center justify-center gap-2 mb-2"
+              >
+                <Download size={18} />
+                Download Resume
+              </a>
+
               <a
                 href="#projects"
-                className="px-10 py-6 sm:py-5 bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 text-base font-black uppercase tracking-widest brutal-border shadow-brutal dark:shadow-brutal-white transition-all brutal-btn text-center hover:translate-x-1 hover:-translate-y-1 min-h-[56px] flex items-center justify-center"
+                className="px-8 md:px-10 py-5 bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 text-sm md:text-base font-black uppercase tracking-widest brutal-border shadow-brutal dark:shadow-brutal-white transition-all brutal-btn text-center hover:translate-x-1 hover:-translate-y-1 min-h-[56px] flex items-center justify-center whitespace-nowrap"
               >
                 Explore Work
               </a>
               <a
                 href="#contact"
-                className="px-10 py-6 sm:py-5 bg-white dark:bg-zinc-800 text-zinc-900 dark:text-white text-base font-black uppercase tracking-widest brutal-border shadow-brutal dark:shadow-brutal-white transition-all brutal-btn text-center hover:translate-x-1 hover:-translate-y-1 min-h-[56px] flex items-center justify-center"
+                className="px-8 md:px-10 py-5 bg-white dark:bg-zinc-800 text-zinc-900 dark:text-white text-sm md:text-base font-black uppercase tracking-widest brutal-border shadow-brutal dark:shadow-brutal-white transition-all brutal-btn text-center hover:translate-x-1 hover:-translate-y-1 min-h-[56px] flex items-center justify-center whitespace-nowrap"
               >
                 Contact
               </a>
@@ -84,18 +96,6 @@ export const Hero: React.FC = () => {
           </div>
         </div>
       </div>
-
-      <style>{`
-        @keyframes fade-in {
-          from { opacity: 0; transform: translateY(10px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in {
-          animation: fade-in 0.6s ease-out forwards;
-        }
-        .delay-100 { animation-delay: 100ms; }
-        .delay-200 { animation-delay: 200ms; }
-      `}</style>
     </div>
   );
 };

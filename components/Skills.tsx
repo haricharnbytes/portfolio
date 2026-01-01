@@ -33,9 +33,9 @@ export const Skills: React.FC = () => {
                 <div 
                   key={skill.name}
                   title={skill.name}
-                  className="group flex flex-col items-center justify-center p-3 brutal-border bg-zinc-50 dark:bg-zinc-800 sm:hover:bg-zinc-900 dark:sm:hover:bg-white sm:hover:text-white dark:sm:hover:text-zinc-900 transition-all duration-200 aspect-square min-w-[60px]"
+                  className="group flex flex-col items-center justify-center p-2 brutal-border bg-zinc-50 dark:bg-zinc-800 sm:hover:bg-zinc-900 dark:sm:hover:bg-white sm:hover:text-white dark:sm:hover:text-zinc-900 transition-all duration-200 aspect-square min-w-[60px]"
                 >
-                  <div className="w-8 h-8 sm:w-9 sm:h-9 mb-2 flex items-center justify-center pointer-events-none">
+                  <div className="w-7 h-7 sm:w-9 sm:h-9 mb-1.5 flex items-center justify-center pointer-events-none">
                     <img 
                       src={skill.icon.startsWith('http') ? skill.icon : `https://cdn.simpleicons.org/${skill.icon}/${isDark ? 'ffffff' : '000000'}`}
                       alt={`${skill.name} logo`}
@@ -49,7 +49,7 @@ export const Skills: React.FC = () => {
                       }}
                     />
                   </div>
-                  <span className="text-[8px] font-black uppercase tracking-tighter text-center leading-none">
+                  <span className="text-[7px] xs:text-[8px] font-black uppercase tracking-tighter text-center leading-none">
                     {skill.name}
                   </span>
                 </div>

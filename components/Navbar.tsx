@@ -24,7 +24,6 @@ export const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Prevent body scroll when mobile menu is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -36,7 +35,6 @@ export const Navbar: React.FC = () => {
     };
   }, [isOpen]);
 
-  // Close menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (navRef.current && !navRef.current.contains(event.target as Node)) {
@@ -54,7 +52,6 @@ export const Navbar: React.FC = () => {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (href.startsWith('#')) {
       e.preventDefault();
-      // Close menu first for smoother transition
       setIsOpen(false);
       
       const element = document.querySelector(href);
@@ -65,7 +62,6 @@ export const Navbar: React.FC = () => {
         const elementPosition = elementRect - bodyRect;
         const offsetPosition = elementPosition - offset;
 
-        // Slight delay to allow menu closing animation to start
         setTimeout(() => {
           window.scrollTo({
             top: offsetPosition,
@@ -77,46 +73,51 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <div ref={navRef} className="fixed top-0 left-0 right-0 z-[100]">
+    <div ref={navRef} className="fixed top-0 left-0 right-0 z-[100] reveal-nav">
       <nav 
         className={`relative z-[110] transition-all duration-300 border-b-2 border-black dark:border-white ${
           isScrolled || isOpen ? 'bg-white dark:bg-zinc-950 py-3' : 'bg-transparent py-5'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 flex items-center justify-between gap-4">
           <a 
             href="#" 
-            className="text-lg sm:text-xl font-black text-zinc-900 dark:text-white uppercase tracking-tighter whitespace-nowrap"
+            className="text-lg sm:text-xl font-black text-zinc-900 dark:text-white uppercase tracking-tighter whitespace-nowrap flex-shrink-0"
             onClick={() => setIsOpen(false)}
           >
             Katta Hari <span className="bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 px-1 ml-0.5">Charan</span>
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {NAV_ITEMS.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                onClick={(e) => handleNavClick(e, item.href)}
-                className="text-[10px] font-black uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors relative group py-2"
+          <div className="hidden md:flex items-center md:gap-4 lg:gap-8">
+            <div className="flex items-center md:gap-4 lg:gap-8">
+              {NAV_ITEMS.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  className="text-[10px] font-black uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors relative group py-2"
+                >
+                  {item.label}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-zinc-900 dark:bg-white transition-all group-hover:w-full"></span>
+                </a>
+              ))}
+            </div>
+            
+            <div className="h-6 w-px bg-zinc-200 dark:bg-zinc-800 self-center"></div>
+            
+            <div className="flex items-center gap-3">
+              <ThemeToggle />
+              <a 
+                href={HERO_DATA.resumeLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-4 py-2 text-[10px] font-black uppercase tracking-widest bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 brutal-border shadow-brutal-sm dark:shadow-brutal-white brutal-btn transition-all flex-shrink-0"
               >
-                {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-zinc-900 dark:bg-white transition-all group-hover:w-full"></span>
+                <Download size={12} />
+                Resume
               </a>
-            ))}
-            <div className="h-4 w-px bg-zinc-200 dark:bg-zinc-800"></div>
-            <ThemeToggle />
-            <a 
-              href={HERO_DATA.resumeLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              download="Katta_Hari_Charan_Resume.pdf"
-              className="flex items-center gap-2 px-4 py-2 text-[10px] font-black uppercase tracking-widest bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 brutal-border shadow-brutal-sm dark:shadow-brutal-white brutal-btn transition-all"
-            >
-              <Download size={12} />
-              Resume
-            </a>
+            </div>
           </div>
 
           {/* Mobile Toggle & Theme */}
@@ -133,12 +134,12 @@ export const Navbar: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile Dropdown - Expanded within the navbar context */}
+        {/* Mobile Dropdown */}
         <div 
           className={`md:hidden absolute top-full left-0 right-0 bg-white dark:bg-zinc-950 border-b-4 border-black dark:border-white z-[105] transition-all duration-300 ease-in-out origin-top overflow-hidden ${
             isOpen ? 'opacity-100 scale-y-100 translate-y-0 pointer-events-auto' : 'opacity-0 scale-y-95 -translate-y-2 pointer-events-none'
           }`}
-          style={{ maxHeight: '80vh', overflowY: 'auto' }}
+          style={{ maxHeight: 'calc(100vh - 80px)', overflowY: 'auto' }}
         >
           <div className="flex flex-col p-6 space-y-2">
             {NAV_ITEMS.map((item, idx) => (
@@ -157,8 +158,8 @@ export const Navbar: React.FC = () => {
             <div className="pt-4 px-2">
               <a 
                 href={HERO_DATA.resumeLink}
+                target="_blank"
                 rel="noopener noreferrer"
-                download="Charan_s_Resume.pdf"
                 className={`flex items-center justify-center gap-3 w-full p-5 text-lg font-black uppercase bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 brutal-border shadow-brutal dark:shadow-brutal-white transition-all ${
                   isOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
                 }`}
@@ -172,7 +173,6 @@ export const Navbar: React.FC = () => {
         </div>
       </nav>
 
-      {/* Scrim overlay to focus user on menu */}
       <div 
         className={`md:hidden fixed inset-0 bg-black/40 backdrop-blur-[2px] transition-opacity duration-300 pointer-events-none ${
           isOpen ? 'opacity-100' : 'opacity-0'

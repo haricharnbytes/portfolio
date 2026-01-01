@@ -11,6 +11,9 @@
         darkMode: 'class',
         theme: {
           extend: {
+            screens: {
+              'xs': '480px',
+            },
             colors: {
               primary: '#18181b',
               accent: '#0d9488',
@@ -66,6 +69,41 @@
       ::-webkit-scrollbar-thumb { background: #18181b; border: 2px solid #000; }
       .dark ::-webkit-scrollbar-track { background: #09090b; border-left: 2px solid #fff; }
       .dark ::-webkit-scrollbar-thumb { background: #fafafa; border: 2px solid #fff; }
+
+      /* Intro Animations */
+      @keyframes reveal-up {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes reveal-down {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .reveal-on-scroll {
+        opacity: 0;
+      }
+
+      .reveal-on-scroll.is-visible {
+        animation: reveal-up 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+
+      .reveal-nav {
+        animation: reveal-down 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
     </style>
   <script type="importmap">
 {

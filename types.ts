@@ -7,6 +7,8 @@ export interface Project {
   tags: string[];
   category: 'ML' | 'Visualization' | 'Data Engineering' | 'Analysis' | 'Software Development' | 'Generative AI' | 'Deep Learning';
   imageUrl: string;
+  videoUrl?: string;
+  iconName?: string;
   repoUrl?: string;
   demoUrl?: string;
   impact?: string;
