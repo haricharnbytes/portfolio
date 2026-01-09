@@ -1,31 +1,20 @@
-Charan’s Portfolio
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
 
-Welcome to my portfolio repository! This is the source code for my personal website where I showcase who I am, what I’ve built, and how to get in touch with me.
+# Run and deploy your AI Studio app
 
-[My Portfolio](https://charanportfolio-theta.vercel.app/)
+This contains everything you need to run your app locally.
 
-## Tech Stack
+View your app in AI Studio: https://ai.studio/apps/drive/1es5_Ha49z27V7NnEI73stieyLb7qcFZU
 
-This portfolio is built using modern web technologies:
+## Run Locally
 
-### Frontend
-- **React** – A JavaScript library for building user interfaces
-- **TypeScript** – Adds static typing for safer and scalable code
-- **Lucide-React** – Icon library for React
+**Prerequisites:**  Node.js
 
-### Build Tools
-- **Vite** – Fast frontend build tool and development server
-- **@vitejs/plugin-react** – Enables React support in Vite
 
-### Development
-- **Node.js** – JavaScript runtime
-- **npm** – Dependency management
-
-### Hosting
-- **Vercel** – Cloud platform for frontend deployment
-
-Hosting: Deployed on Vercel
-
-Projects: My featured work and links to live demos + code.
-
-Contact: Ways to get in touch with me.
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
