@@ -26,18 +26,6 @@ This portfolio is built using modern web technologies:
 
 Hosting: Deployed on Vercel
 
-(Update according to your actual tech stack)
-
-Sections
-
-Here’s what you’ll find on the site:
-
-Home: A brief introduction about me.
-
-About: My background and journey.
-
-Skills: Tech and tools I’ve worked with.
-
 Projects: My featured work and links to live demos + code.
 
 Contact: Ways to get in touch with me.
