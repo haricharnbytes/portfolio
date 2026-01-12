@@ -47,14 +47,14 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 3,
-    title: "Predictive Real Estate Analytics",
+    title: "Predictive House Marketing Analytics",
     description: "Built demand forecasting and pricing models using historical time-series data and gradient boosting techniques.",
-    impact: "Increased sales forecast accuracy by 18% for regional stakeholders.",
+    //impact: "Increased sales forecast accuracy by 18% for regional stakeholders.",
     tags: ["Scikit-Learn", "XGBoost", "Pandas", "Matplotlib"],
     category: "ML",
     iconName: "Home",
-    imageUrl: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800",
-    repoUrl: "https://github.com/haricharnbytes",
+    imageUrl: "https://share.google/asp7bjlOsVxOioRRs",
+    repoUrl: "https://github.com/haricharnbytes/housing_marketing_analysis",
     demoUrl: "#"
   }
 ];
